@@ -1,0 +1,2539 @@
+{
+ "model": "nemotron-3-nano-4b",
+ "engine": "llama-b10948",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.81,
+  "repeat_penalty": 1.1,
+  "presence_penalty": 1.4,
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  },
+  "max_tokens": 300
+ },
+ "system": "You are a desktop assistant on a Mac. When a tool fits the request, call it. When none is needed, just answer.",
+ "menus": {
+  "6": [
+   "media_play",
+   "read_file",
+   "app_open",
+   "mcp__provider.search__web_search",
+   "calculate",
+   "window_tile"
+  ],
+  "12": [
+   "window_list",
+   "write_file",
+   "app_open",
+   "app_status",
+   "bash",
+   "calculate",
+   "mcp__provider.search__web_search",
+   "media_play",
+   "read_file",
+   "media_status",
+   "window_tile",
+   "app_list"
+  ],
+  "20": [
+   "window_list",
+   "terminal_open",
+   "terminal_read",
+   "window_focus",
+   "update_plan",
+   "role_resolve",
+   "mcp__provider.spotify__search",
+   "app_list",
+   "window_place",
+   "media_play",
+   "bash",
+   "app_open",
+   "terminal_send",
+   "app_status",
+   "calculate",
+   "read_file",
+   "write_file",
+   "mcp__provider.search__web_search",
+   "media_status",
+   "window_tile"
+  ],
+  "35": [
+   "window_tile",
+   "profile_read",
+   "mcp__provider.spotify__search",
+   "app_status",
+   "media_play",
+   "terminal_read",
+   "window_workspace",
+   "write_file",
+   "terminal_open",
+   "workspace_folder",
+   "window_place",
+   "read_file",
+   "app_list",
+   "terminal_list",
+   "window_attach",
+   "role_resolve",
+   "window_list_managed",
+   "calculate",
+   "fn__excel__read_range",
+   "mcp__provider.search__web_search",
+   "window_detach",
+   "bash",
+   "terminal_signal",
+   "gameterm_resize",
+   "window_focus",
+   "workspace_open",
+   "app_open",
+   "update_plan",
+   "fn__excel__write_cells",
+   "terminal_send",
+   "mcp__provider.spotify__playback_state",
+   "window_list",
+   "request_terminal_authority",
+   "media_status",
+   "terminal_close"
+  ]
+ },
+ "repeats": 2,
+ "results": [
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 9.9,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 3.2,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1529,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1517,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 1526,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1520,
+   "seconds": 6.0,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 1524,
+   "seconds": 2.6,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 1523,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1524,
+   "seconds": 11.6,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1522,
+   "seconds": 6.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": false,
+   "prompt_tokens": 1530,
+   "seconds": 3.6,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1525,
+   "seconds": 4.9,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 1529,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 1522,
+   "seconds": 4.0,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1521,
+   "seconds": 4.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 1.8,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1520,
+   "seconds": 2.2,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 1,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 1.1,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 3.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 1529,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1517,
+   "seconds": 4.3,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 4.4,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 1526,
+   "seconds": 4.4,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 1525,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1520,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 1524,
+   "seconds": 2.4,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 1523,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 1524,
+   "seconds": 2.3,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": false,
+   "prompt_tokens": 1522,
+   "seconds": 5.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1530,
+   "seconds": 5.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1525,
+   "seconds": 3.9,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 1529,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 1522,
+   "seconds": 3.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 1521,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 1.7,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1520,
+   "seconds": 2.5,
+   "error": null
+  },
+  {
+   "size": 6,
+   "attempt": 2,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 1521,
+   "seconds": 0.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 15.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2576,
+   "seconds": 2.9,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 2564,
+   "seconds": 6.4,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2568,
+   "seconds": 2.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 3.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 2573,
+   "seconds": 4.0,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 2567,
+   "seconds": 4.3,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2571,
+   "seconds": 2.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2570,
+   "seconds": 3.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2571,
+   "seconds": 2.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2569,
+   "seconds": 1.3,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": false,
+   "prompt_tokens": 2577,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2572,
+   "seconds": 1.5,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2576,
+   "seconds": 4.0,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2569,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 2.2,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 2.0,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2567,
+   "seconds": 2.4,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 1,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 1.2,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 2576,
+   "seconds": 3.9,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2564,
+   "seconds": 2.9,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 2568,
+   "seconds": 3.5,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2568,
+   "seconds": 2.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 2573,
+   "seconds": 5.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 2572,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "app_open"
+   ],
+   "ok": false,
+   "prompt_tokens": 2567,
+   "seconds": 4.2,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2571,
+   "seconds": 3.5,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2570,
+   "seconds": 2.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 2571,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2569,
+   "seconds": 1.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 2577,
+   "seconds": 6.2,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 2572,
+   "seconds": 1.3,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2576,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2569,
+   "seconds": 2.0,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 1.6,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2567,
+   "seconds": 2.3,
+   "error": null
+  },
+  {
+   "size": 12,
+   "attempt": 2,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 2568,
+   "seconds": 1.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4124,
+   "seconds": 32.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4124,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4128,
+   "seconds": 4.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4116,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4120,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4120,
+   "seconds": 4.3,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4125,
+   "seconds": 3.6,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "role_resolve"
+   ],
+   "ok": false,
+   "prompt_tokens": 4124,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "role_resolve"
+   ],
+   "ok": false,
+   "prompt_tokens": 4119,
+   "seconds": 3.2,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4123,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4122,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4123,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4121,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4129,
+   "seconds": 3.2,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4124,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4128,
+   "seconds": 5.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4121,
+   "seconds": 4.7,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 4.6,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 2.3,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4119,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 1,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 1.1,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4124,
+   "seconds": 2.7,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4124,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 4128,
+   "seconds": 3.9,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4116,
+   "seconds": 3.3,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4120,
+   "seconds": 3.2,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 4120,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4125,
+   "seconds": 3.0,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "role_resolve"
+   ],
+   "ok": false,
+   "prompt_tokens": 4124,
+   "seconds": 2.7,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4119,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4123,
+   "seconds": 2.4,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4122,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 4123,
+   "seconds": 2.5,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4121,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 4129,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 4124,
+   "seconds": 5.3,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4128,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4121,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 4.9,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 1.9,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4119,
+   "seconds": 2.6,
+   "error": null
+  },
+  {
+   "size": 20,
+   "attempt": 2,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 4120,
+   "seconds": 1.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 47.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 3.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7422,
+   "seconds": 4.2,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7410,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7414,
+   "seconds": 4.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7414,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "media_play"
+   ],
+   "ok": true,
+   "prompt_tokens": 7419,
+   "seconds": 5.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 3.6,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 7413,
+   "seconds": 7.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7417,
+   "seconds": 3.2,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7416,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7417,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7415,
+   "seconds": 3.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7423,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7418,
+   "seconds": 2.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 7422,
+   "seconds": 3.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "workspace_folder"
+   ],
+   "ok": false,
+   "prompt_tokens": 7415,
+   "seconds": 3.3,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 2.2,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7413,
+   "seconds": 2.2,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 1,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 1.0,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "What is 487 times 36?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "What is 15 percent of 80?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 3.7,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "What is the square root of 2, times 100?",
+   "right_tools": [
+    "calculate"
+   ],
+   "called": [
+    "calculate"
+   ],
+   "ok": true,
+   "prompt_tokens": 7422,
+   "seconds": 3.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Open Safari.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7410,
+   "seconds": 4.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Can you launch the Notes app?",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7414,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Open the Calculator app for me.",
+   "right_tools": [
+    "app_open"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7414,
+   "seconds": 2.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Play Mr. Suave by Parokya ni Edgar.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7419,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Put on the song Stronger by Kanye West.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "mcp__provider.spotify__search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7418,
+   "seconds": 2.3,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Play some Daft Punk.",
+   "right_tools": [
+    "mcp__provider.spotify__search",
+    "media_play"
+   ],
+   "called": [
+    "role_resolve"
+   ],
+   "ok": false,
+   "prompt_tokens": 7413,
+   "seconds": 2.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Search the web for the latest stable Rust release.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7417,
+   "seconds": 2.9,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Look up today's top news headlines online.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7416,
+   "seconds": 2.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Search online for the weather in Manila right now.",
+   "right_tools": [
+    "mcp__provider.search__web_search"
+   ],
+   "called": [
+    "mcp__provider.search__web_search"
+   ],
+   "ok": true,
+   "prompt_tokens": 7417,
+   "seconds": 2.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Tile Safari and Notes side by side.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7415,
+   "seconds": 2.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Put Safari on the left half of the screen and Terminal on the right half.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "app_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7423,
+   "seconds": 4.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Arrange my two open windows next to each other.",
+   "right_tools": [
+    "window_place",
+    "window_tile"
+   ],
+   "called": [
+    "window_list"
+   ],
+   "ok": false,
+   "prompt_tokens": 7418,
+   "seconds": 1.2,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Read the file notes.txt in my workspace and tell me what it says.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 7422,
+   "seconds": 4.7,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Show me the contents of README.md.",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [],
+   "ok": false,
+   "prompt_tokens": 7415,
+   "seconds": 4.8,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "What is written in todo.txt?",
+   "right_tools": [
+    "read_file"
+   ],
+   "called": [
+    "read_file"
+   ],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 3.1,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Hi, how are you today?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 1.4,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "Tell me a short joke.",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7413,
+   "seconds": 2.5,
+   "error": null
+  },
+  {
+   "size": 35,
+   "attempt": 2,
+   "question": "What is the capital of France?",
+   "right_tools": [],
+   "called": [],
+   "ok": true,
+   "prompt_tokens": 7414,
+   "seconds": 0.8,
+   "error": null
+  }
+ ]
+}

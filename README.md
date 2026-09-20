@@ -11,6 +11,7 @@ This repo is tooling. It is not part of any product, and nothing here ships.
 |---|---|
 | [`bc-arithmetic`](bc-arithmetic/) | How much better is a small model at arithmetic when it can call `bc`, and how well does it write `bc` commands? |
 | [`gameterm-calculate`](gameterm-calculate/) | Inside a real assistant app, does a small model use a calculator tool when told to, and is the answer it gives the person right? |
+| [`tool-menu-size`](tool-menu-size/) | How many tools can a small model see before it picks the wrong one? Is there a number to cap the menu at? |
 
 ## Requirements
 
