@@ -41,6 +41,36 @@ calculator that takes an expression, handles `mod` correctly whatever the
 precision, and returns a tidy number would remove the level 8 misses. Nothing
 fixes a word problem that was set up wrong.
 
+## When the model used the tool, was it right?
+
+Pooled over every recorded attempt in both passes (80 attempts with the tool
+offered; the model called bc in 73 of them):
+
+| | Right | Share |
+|---|---|---|
+| The model called bc | 63 of 73 | 86% |
+| The same questions in its head | 59 of 80 | 74% |
+
+The ten misses after calling bc:
+
+- 3 were the first pass's "digits only" wording (bc gave the right number and
+  the model dropped the decimal point);
+- 4 were bc misleading the model (level 8: the remainder under `-l`, the
+  fractional power);
+- 3 were the model's own, all Nemotron: functions bc does not have
+  (`round(...)`, `printf`), the tax added as `+ 0.08` instead of times 1.08,
+  and `1.05^10` computed without multiplying by 1000.
+
+Without the wording flaw and without the trap level: 58 of 61, 95%. By model,
+when it called bc: Qwen3.5 4B 13 of 13, Qwen3 8B 27 of 32 (every miss the
+flaw or a trap), Nemotron 3 Nano 4B 23 of 28.
+
+So: when a model uses a tool and the tool's output is sound, it is right about
+95% of the time. What is left is the tool misleading it (fixable in the tool),
+the model handing the tool the wrong input (not fixable by the tool), and the
+model not calling the tool at all (7 of 80 here; the tool's description is
+the lever).
+
 ## Not done yet
 
 1. **Repeats.** Ask every question at least three times per condition and
