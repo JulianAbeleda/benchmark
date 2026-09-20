@@ -1,0 +1,183 @@
+{
+ "model": "qwen3.5-4b",
+ "order": "easy first",
+ "said_before_each_question": "Use the calculate tool for this. Do not work it out yourself.",
+ "questions": [
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 plus 2?",
+   "want": 4,
+   "tool_calls": [
+    "{\"expression\":\"2 + 2\",\"decimals\":0}"
+   ],
+   "app_row": "2 + 2 = 4",
+   "reply": "Four. Simple as that, buddy.\nWhat else needs explaining?",
+   "cards": 0,
+   "seconds_on_screen": 13.0
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 10 minus 4?",
+   "want": 6,
+   "tool_calls": [
+    "{\"expression\":\"10 - 4\",\"decimals\":0}"
+   ],
+   "app_row": "10 - 4 = 6",
+   "reply": "Six. Got it, buddy. Need more math?\nOr maybe we should grab a bodega sandwich instead? My tummy’s rumbling!",
+   "cards": 0,
+   "seconds_on_screen": 20.3
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 487 times 36?",
+   "want": 17532,
+   "tool_calls": [
+    "{\"expression\":\"487 * 36\",\"decimals\":0}"
+   ],
+   "app_row": "487 * 36 = 17532",
+   "reply": "Seventeen thousand, five hundred thirty-two. That’s a big number for my paws to handle!\nNeed help with something else? Or maybe we should go back to bodega sandwiches? I’m getting hungry again. 🐾",
+   "cards": 0,
+   "seconds_on_screen": 23.8
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 9126 divided by 18?",
+   "want": 507,
+   "tool_calls": [
+    "{\"expression\":\"9126 / 18\",\"decimals\":0}"
+   ],
+   "app_row": "9126 / 18 = 507",
+   "reply": "Five hundred and seven.\nNeed more numbers? Or should we go back to bodega sandwiches? My tummy’s still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 21.0
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 15 percent of 80?",
+   "want": 12,
+   "tool_calls": [
+    "{\"expression\":\"15% of 80\",\"decimals\":2}"
+   ],
+   "app_row": "15% of 80 = 12",
+   "reply": "Twelve. Simple enough, buddy!\nNeed more numbers? Or should we grab a bodega sandwich soon? My tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 21.9
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 19.99 times 3?",
+   "want": 59.97,
+   "tool_calls": [
+    "{\"expression\":\"19.99 * 3\",\"decimals\":2}"
+   ],
+   "app_row": "19.99 * 3 = 59.97",
+   "reply": "Fifty-nine point nine seven.\nThat’s almost sixty bucks! You buying three coffees? Or maybe bodega sandwiches for the team? 🐾\nNeed help with anything else, buddy?",
+   "cards": 0,
+   "seconds_on_screen": 25.6
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is (1499 times 12) divided by 7? Round to 2 decimals.",
+   "want": 2569.71,
+   "tool_calls": [
+    "{\"expression\":\"(1499 * 12) / 7\",\"decimals\":2}"
+   ],
+   "app_row": "(1499 * 12) / 7 = 2569.7142857143, which is 2569.71 at 2 decimals",
+   "reply": "Two thousand five hundred sixty-nine point seven one!\nThat’s a big number for my paws to handle, but I got it done! Need help with anything else? Or should we grab some bodega sandwiches soon?\nMy tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 37.8
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the average of 23, 47, 58, 91 and 106?",
+   "want": 65,
+   "tool_calls": [
+    "{\"expression\":\"(23 + 47 + 58 + 91 + 106) / 5\",\"decimals\":2}"
+   ],
+   "app_row": "(23 + 47 + 58 + 91 + 106) / 5 = 65",
+   "reply": "Sixty-five.\nThat’s the average, buddy! Need more numbers? Or should we grab some bodega sandwiches soon?\nMy tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 29.0
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 123456789 times 987654321?",
+   "want": 121932631112635269,
+   "tool_calls": [
+    "{\"expression\":\"123456789 * 987654321\",\"decimals\":0}"
+   ],
+   "app_row": "123456789 * 987654321 = 121932631112635269",
+   "reply": "One hundred twenty-one billion, nine-hundred thirty-two million, six-hundred thirty-one thousand, one-hundred twelve million, six-hundred thirty-five thousand and two hundred sixty-nine!\nThat’s a really big number for my paws to handle, but I got it done! Need help with anything else? Or should we grab some bodega sandwiches soon?\nMy tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 36.1
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 to the power of 40?",
+   "want": 1099511627776,
+   "tool_calls": [
+    "{\"expression\":\"2 ** 40\",\"decimals\":0}"
+   ],
+   "app_row": "2 ** 40 = 1099511627776",
+   "reply": "One trillion, nine-hundred ninety-five billion, one hundred sixteen million, two hundred seventy-seven thousand and seven hundred sixty!\nThat’s a huge number for my paws to handle. But I got it done! Need help with anything else?\nOr should we grab some bodega sandwiches soon? My tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 45.7
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. A shirt costs 24.50. It is 20 percent off. Then 8 percent sales tax is added. What do 3 shirts cost in total? Round to 2 decimals.",
+   "want": 63.5,
+   "tool_calls": [
+    "{\"expression\":\"(24.50 * (1 - 20%)) * (1 + 8%) * 3\",\"decimals\":2}"
+   ],
+   "app_row": "(24.50 * (1 - 20%)) * (1 + 8%) * 3 = 63.504, which is 63.5 at 2 decimals",
+   "reply": "Sixty-three point five zero!\nSo three shirts after the discount and tax come to about sixty-three dollars. Not bad for a bodega sale, right? 🐾 Need help with anything else, buddy?\nOr maybe we should grab some more sandwiches soon? My tummy's still rumbling!",
+   "cards": 0,
+   "seconds_on_screen": 38.3
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. 1000 dollars grows at 5 percent a year, compounded yearly, for 10 years. What is the final amount? Round to 2 decimals.",
+   "want": 1628.89,
+   "tool_calls": [
+    "{\"expression\":\"1000 * (1 + 0.05)^10\",\"decimals\":2}"
+   ],
+   "app_row": "1000 * (1 + 0.05)^10 = 1628.89462677744140625, which is 1628.89 at 2 decimals",
+   "reply": "One thousand six hundred twenty-eight dollars and eighty-nine cents!\nSo your $1,000 would grow to about $1,628.89 after 10 years at 5% interest compounded yearly. Not bad for some digital barking in the clouds! 🐾 Need help with anything else?\nOr maybe we should grab a sandwich soon? My tummy's still rumbling!",
+   "cards": 0,
+   "seconds_on_screen": 37.7
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. A right triangle has legs of 5 and 12. How long is the hypotenuse?",
+   "want": 13,
+   "tool_calls": [
+    "{\"expression\":\"sqrt(5^2 + 12^2)\",\"decimals\":0}"
+   ],
+   "app_row": "sqrt(5^2 + 12^2) = 13",
+   "reply": "Thirteen!\nThat’s the hypotenuse, buddy. Classic Pythagorean triple: 5-12-13.\nNeed more math? Or maybe we should grab a bodega sandwich soon? My tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 43.2
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the square root of 2, times 100? Round to 2 decimals.",
+   "want": 141.42,
+   "tool_calls": [
+    "{\"expression\":\"sqrt(2) * 100\",\"decimals\":2}"
+   ],
+   "app_row": "sqrt(2) * 100 = 141.4213562373, which is 141.42 at 2 decimals",
+   "reply": "One hundred forty-one point four two!\nThat’s the square root of two times one hundred, buddy. Need more math? Or should we grab a bodega sandwich soon?\nMy tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 37.8
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the remainder when 1000003 is divided by 97?",
+   "want": 30,
+   "tool_calls": [
+    "{\"expression\":\"1000003 % 97\",\"decimals\":0}"
+   ],
+   "app_row": "1000003 % 97 = 30",
+   "reply": "Thirty!\nSo when you divide one million and three by ninety-seven, the remainder is thirty. Got it, buddy!\nNeed more math? Or should we grab a bodega sandwich soon? My tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 44.3
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 to the power of 0.5, times 10? Round to 3 decimals.",
+   "want": 14.142,
+   "tool_calls": [
+    "{\"expression\":\"sqrt(2) * 10\",\"decimals\":3}"
+   ],
+   "app_row": "sqrt(2) * 10 = 14.1421356237, which is 14.142 at 3 decimals",
+   "reply": "Fourteen point one four two!\nThat’s ten times the square root of two, buddy. Need more math? Or should we grab a bodega sandwich soon?\nMy tummy's still rumbling! 🐾",
+   "cards": 0,
+   "seconds_on_screen": 43.3
+  }
+ ]
+}

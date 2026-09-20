@@ -10,6 +10,7 @@ This repo is tooling. It is not part of any product, and nothing here ships.
 | Folder | Question it answers |
 |---|---|
 | [`bc-arithmetic`](bc-arithmetic/) | How much better is a small model at arithmetic when it can call `bc`, and how well does it write `bc` commands? |
+| [`gameterm-calculate`](gameterm-calculate/) | Inside a real assistant app, does a small model use a calculator tool when told to, and is the answer it gives the person right? |
 
 ## Requirements
 

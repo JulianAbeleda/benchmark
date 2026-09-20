@@ -1,0 +1,183 @@
+{
+ "model": "qwen3-8b",
+ "order": "easy first",
+ "said_before_each_question": "Use the calculate tool for this. Do not work it out yourself.",
+ "questions": [
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 plus 2?",
+   "want": 4,
+   "tool_calls": [
+    "{\"expression\": \"2 + 2\"}"
+   ],
+   "app_row": "2 + 2 = 4",
+   "reply": "2 plus 2 equals 4.",
+   "cards": 0,
+   "seconds_on_screen": 16.6
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 10 minus 4?",
+   "want": 6,
+   "tool_calls": [
+    "{\"expression\": \"10 - 4\"}"
+   ],
+   "app_row": "10 - 4 = 6",
+   "reply": "10 minus 4 equals 6.",
+   "cards": 0,
+   "seconds_on_screen": 14.8
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 487 times 36?",
+   "want": 17532,
+   "tool_calls": [
+    "{\"expression\": \"487 * 36\"}"
+   ],
+   "app_row": "487 * 36 = 17532",
+   "reply": "487 times 36 equals 17,532.",
+   "cards": 0,
+   "seconds_on_screen": 17.9
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 9126 divided by 18?",
+   "want": 507,
+   "tool_calls": [
+    "{\"expression\": \"9126 / 18\"}"
+   ],
+   "app_row": "9126 / 18 = 507",
+   "reply": "9126 divided by 18 equals 507.",
+   "cards": 0,
+   "seconds_on_screen": 20.6
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 15 percent of 80?",
+   "want": 12,
+   "tool_calls": [
+    "{\"expression\": \"80 * (15%)\"}"
+   ],
+   "app_row": "80 * (15%) = 12",
+   "reply": "15 percent of 80 is 12.",
+   "cards": 0,
+   "seconds_on_screen": 14.5
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 19.99 times 3?",
+   "want": 59.97,
+   "tool_calls": [
+    "{\"expression\": \"19.99 * 3\"}"
+   ],
+   "app_row": "19.99 * 3 = 59.97",
+   "reply": "19.99 times 3 equals 59.97.",
+   "cards": 0,
+   "seconds_on_screen": 15.8
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is (1499 times 12) divided by 7? Round to 2 decimals.",
+   "want": 2569.71,
+   "tool_calls": [
+    "{\"expression\": \"(1499 * 12) / 7\", \"decimals\": 2}"
+   ],
+   "app_row": "(1499 * 12) / 7 = 2569.7142857143, which is 2569.71 at 2 decimals",
+   "reply": "(1499 times 12) divided by 7 equals 2,569.71 when rounded to two decimal places.",
+   "cards": 0,
+   "seconds_on_screen": 36.6
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the average of 23, 47, 58, 91 and 106?",
+   "want": 65,
+   "tool_calls": [
+    "{\"expression\": \"(23 + 47 + 58 + 91 + 106) / 5\"}"
+   ],
+   "app_row": "(23 + 47 + 58 + 91 + 106) / 5 = 65",
+   "reply": "The average of 23, 47, 58, 91, and 106 is 65.",
+   "cards": 0,
+   "seconds_on_screen": 25.9
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 123456789 times 987654321?",
+   "want": 121932631112635269,
+   "tool_calls": [
+    "{\"expression\": \"123456789 * 987654321\"}"
+   ],
+   "app_row": "123456789 * 987654321 = 121932631112635269",
+   "reply": "123,456,789 times 987,654,321 equals 121,932,631,112,635,269.",
+   "cards": 0,
+   "seconds_on_screen": 38.3
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 to the power of 40?",
+   "want": 1099511627776,
+   "tool_calls": [
+    "{\"expression\": \"2 ^ 40\"}"
+   ],
+   "app_row": "2 ^ 40 = 1099511627776",
+   "reply": "2 to the power of 40 equals 1,099,511,627,776.",
+   "cards": 0,
+   "seconds_on_screen": 23.1
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. A shirt costs 24.50. It is 20 percent off. Then 8 percent sales tax is added. What do 3 shirts cost in total? Round to 2 decimals.",
+   "want": 63.5,
+   "tool_calls": [
+    "{\"expression\": \"3 * (24.50 * (1 - 20%) + 24.50 * (1 - 20%) * 8%)\", \"decimals\": 2}"
+   ],
+   "app_row": "3 * (24.50 * (1 - 20%) + 24.50 * (1 - 20%) * 8%) = 63.504, which is 63.5 at 2 decimals",
+   "reply": "Three shirts cost $63.50 in total after applying a 20% discount and adding 8% sales tax.",
+   "cards": 0,
+   "seconds_on_screen": 30.1
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. 1000 dollars grows at 5 percent a year, compounded yearly, for 10 years. What is the final amount? Round to 2 decimals.",
+   "want": 1628.89,
+   "tool_calls": [
+    "{\"expression\": \"1000 * (1 + 5%)^10\", \"decimals\": 2}"
+   ],
+   "app_row": "1000 * (1 + 5%)^10 = 1628.89462677744140625, which is 1628.89 at 2 decimals",
+   "reply": "The final amount after 10 years with a 5% annual interest rate compounded yearly is $1,628.89.",
+   "cards": 0,
+   "seconds_on_screen": 25.9
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. A right triangle has legs of 5 and 12. How long is the hypotenuse?",
+   "want": 13,
+   "tool_calls": [
+    "{\"expression\": \"sqrt(5^2 + 12^2)\"}"
+   ],
+   "app_row": "sqrt(5^2 + 12^2) = 13",
+   "reply": "The hypotenuse of a right triangle with legs of 5 and 12 is 13.",
+   "cards": 0,
+   "seconds_on_screen": 16.7
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the square root of 2, times 100? Round to 2 decimals.",
+   "want": 141.42,
+   "tool_calls": [
+    "{\"expression\": \"sqrt(2) * 100\", \"decimals\": 2}"
+   ],
+   "app_row": "sqrt(2) * 100 = 141.4213562373, which is 141.42 at 2 decimals",
+   "reply": "The square root of 2 times 100 is approximately 141.42 when rounded to two decimal places.",
+   "cards": 0,
+   "seconds_on_screen": 20.3
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is the remainder when 1000003 is divided by 97?",
+   "want": 30,
+   "tool_calls": [
+    "{\"expression\": \"1000003 % 97\"}"
+   ],
+   "app_row": "1000003 % 97 = 30",
+   "reply": "The remainder when 1000003 is divided by 97 is 30.",
+   "cards": 0,
+   "seconds_on_screen": 17.7
+  },
+  {
+   "asked": "Use the calculate tool for this. Do not work it out yourself. What is 2 to the power of 0.5, times 10? Round to 3 decimals.",
+   "want": 14.142,
+   "tool_calls": [
+    "{\"expression\": \"sqrt(2) * 10\", \"decimals\": 3}"
+   ],
+   "app_row": "sqrt(2) * 10 = 14.1421356237, which is 14.142 at 3 decimals",
+   "reply": "2 to the power of 0.5 (which is the square root of 2) times 10 equals approximately 14.142 when rounded to three decimal places.",
+   "cards": 0,
+   "seconds_on_screen": 37.2
+  }
+ ]
+}
