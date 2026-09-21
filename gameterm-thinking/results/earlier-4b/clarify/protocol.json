@@ -1,0 +1,30 @@
+{
+  "purpose": "Fresh local diagnostic comparison, not training or adoption evidence",
+  "counts": {
+    "math": 24,
+    "clarification": 8,
+    "plain": 20
+  },
+  "repetitions": 2,
+  "question_review": "Same assistant authored and audited before inference; exact Fraction and native calculator independently check arithmetic, not an independent semantic reviewer.",
+  "runtime": "Existing shared GameTerm Rust harness, 35 tools, natural requests, no extra instruction to clarify or call calculator.",
+  "settings": {
+    "thinking": false,
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 768,
+    "prompt_cache": false,
+    "ram_cache": 0
+  },
+  "scoring": "Use calculator_quality_review.score with explicit final-response judgments. Correct prose, units and final equivalent expressions accepted. Mere setup/promise is partial. On unclear items require a targeted question identifying the frozen missing fact; alternatives plus a targeted question accepted, guessing alone fails. Clear controls penalize needless clarification. Incomplete/truncated responses fail. Any non-calculate tool on math/clarification, or any tool on plain questions, is a policy violation.",
+  "diagnostics": "Manually label problem setup from explicit expression/reasoning (unknown if not visible), calculator invocation, task-correct numeric receipt, and final answer; never equate execution success with correct setup. No call is not applicable for execution, not a failure when final answer is correct.",
+  "statistics": "Per-family paired item SD/SE, 100000-sample paired bootstrap CI and exact McNemar; repetitions reported separately, not pooled. Review first-run anonymized responses before exposing model map.",
+  "gate": "Only consider a new small training pilot if trained vs original math has net gain >=3, CI lower >0, exact p<.05, no plain losses, no clarification losses, and no new incomplete math turns in both repeats. Otherwise target observed failure types without launching training. No deployment or large investment authorized by this diagnostic.",
+  "limits": [
+    "Small hand-authored diagnostic, not representative population sample",
+    "Two deterministic repetitions do not measure training-seed variance",
+    "No independent semantic adjudicator",
+    "Local exact-prompt novelty checked; broad pretraining overlap unknown",
+    "No Air runtime parity claim"
+  ]
+}

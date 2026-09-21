@@ -1,0 +1,58 @@
+{
+  "families": {
+    "math": {
+      "n": 64,
+      "before": 12,
+      "after": 12,
+      "gains": 0,
+      "losses": 0,
+      "net_gain": 0,
+      "sd": 0.0,
+      "se": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "exact_mcnemar_p": 1.0,
+      "before_tool_use": 0,
+      "after_tool_use": 0
+    },
+    "plain": {
+      "n": 20,
+      "before": 19,
+      "after": 20,
+      "gains": 1,
+      "losses": 0,
+      "net_gain": 1,
+      "sd": 0.22360679774997894,
+      "se": 0.04999999999999999,
+      "ci95": [
+        0.0,
+        0.15
+      ],
+      "exact_mcnemar_p": 1.0,
+      "before_tool_use": 0,
+      "after_tool_use": 0
+    },
+    "selection": {
+      "n": 16,
+      "before": 15,
+      "after": 16,
+      "gains": 1,
+      "losses": 0,
+      "net_gain": 1,
+      "sd": 0.25,
+      "se": 0.0625,
+      "ci95": [
+        0.0,
+        0.1875
+      ],
+      "exact_mcnemar_p": 1.0,
+      "before_tool_use": 16,
+      "after_tool_use": 16
+    }
+  },
+  "passed_investment_gate": false,
+  "math_loop_or_unrelated": [],
+  "new_plain_tool_use": []
+}

@@ -1,0 +1,637 @@
+{
+  "runs": [
+    {
+      "summary": {
+        "unmodified": {
+          "math": {
+            "n": 24,
+            "success": 22,
+            "calculator": 4,
+            "setup_correct": 24,
+            "setup_unknown": 0,
+            "task_correct_receipt": 4,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 0,
+            "calculator": 1,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [
+              "clarify-03",
+              "clarify-06"
+            ],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        },
+        "nemotron": {
+          "math": {
+            "n": 24,
+            "success": 22,
+            "calculator": 24,
+            "setup_correct": 22,
+            "setup_unknown": 0,
+            "task_correct_receipt": 23,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 0,
+            "calculator": 8,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [
+              "clarify-08"
+            ],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        },
+        "qwen": {
+          "math": {
+            "n": 24,
+            "success": 24,
+            "calculator": 18,
+            "setup_correct": 24,
+            "setup_unknown": 0,
+            "task_correct_receipt": 17,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 2,
+            "calculator": 6,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        }
+      },
+      "paired_vs_original": {
+        "nemotron": {
+          "math": {
+            "interaction_success": {
+              "n": 24,
+              "before": 22,
+              "after": 22,
+              "gains": 2,
+              "losses": 2,
+              "net_gain": 0,
+              "paired_sd": 0.41702882811414954,
+              "paired_se": 0.08512565307587487,
+              "ci95": [
+                -0.16666666666666666,
+                0.16666666666666666
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 24,
+              "before": 4,
+              "after": 24,
+              "gains": 20,
+              "losses": 0,
+              "net_gain": 20,
+              "paired_sd": 0.38069349381344053,
+              "paired_se": 0.07770873402002616,
+              "ci95": [
+                0.6666666666666666,
+                0.9583333333333334
+              ],
+              "exact_mcnemar_p": 1.9073486328125e-06
+            }
+          },
+          "clarification": {
+            "interaction_success": {
+              "n": 8,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 8,
+              "before": 1,
+              "after": 8,
+              "gains": 7,
+              "losses": 0,
+              "net_gain": 7,
+              "paired_sd": 0.3535533905932738,
+              "paired_se": 0.125,
+              "ci95": [
+                0.625,
+                1.0
+              ],
+              "exact_mcnemar_p": 0.015625
+            }
+          },
+          "plain": {
+            "interaction_success": {
+              "n": 20,
+              "before": 20,
+              "after": 20,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 20,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            }
+          }
+        },
+        "qwen": {
+          "math": {
+            "interaction_success": {
+              "n": 24,
+              "before": 22,
+              "after": 24,
+              "gains": 2,
+              "losses": 0,
+              "net_gain": 2,
+              "paired_sd": 0.28232985128663995,
+              "paired_se": 0.05763033956734372,
+              "ci95": [
+                0.0,
+                0.20833333333333334
+              ],
+              "exact_mcnemar_p": 0.5
+            },
+            "calculator": {
+              "n": 24,
+              "before": 4,
+              "after": 18,
+              "gains": 16,
+              "losses": 2,
+              "net_gain": 14,
+              "paired_sd": 0.6538625481582945,
+              "paired_se": 0.13346913374198452,
+              "ci95": [
+                0.2916666666666667,
+                0.8333333333333334
+              ],
+              "exact_mcnemar_p": 0.001312255859375
+            }
+          },
+          "clarification": {
+            "interaction_success": {
+              "n": 8,
+              "before": 0,
+              "after": 2,
+              "gains": 2,
+              "losses": 0,
+              "net_gain": 2,
+              "paired_sd": 0.4629100498862757,
+              "paired_se": 0.16366341767699427,
+              "ci95": [
+                0.0,
+                0.625
+              ],
+              "exact_mcnemar_p": 0.5
+            },
+            "calculator": {
+              "n": 8,
+              "before": 1,
+              "after": 6,
+              "gains": 5,
+              "losses": 0,
+              "net_gain": 5,
+              "paired_sd": 0.5175491695067657,
+              "paired_se": 0.18298126367784995,
+              "ci95": [
+                0.25,
+                0.875
+              ],
+              "exact_mcnemar_p": 0.0625
+            }
+          },
+          "plain": {
+            "interaction_success": {
+              "n": 20,
+              "before": 20,
+              "after": 20,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 20,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            }
+          }
+        }
+      },
+      "training_pilot_gate": false
+    },
+    {
+      "summary": {
+        "unmodified": {
+          "math": {
+            "n": 24,
+            "success": 22,
+            "calculator": 4,
+            "setup_correct": 24,
+            "setup_unknown": 0,
+            "task_correct_receipt": 4,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 0,
+            "calculator": 1,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [
+              "clarify-03",
+              "clarify-06"
+            ],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        },
+        "nemotron": {
+          "math": {
+            "n": 24,
+            "success": 22,
+            "calculator": 24,
+            "setup_correct": 22,
+            "setup_unknown": 0,
+            "task_correct_receipt": 23,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 0,
+            "calculator": 8,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [
+              "clarify-08"
+            ],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        },
+        "qwen": {
+          "math": {
+            "n": 24,
+            "success": 24,
+            "calculator": 18,
+            "setup_correct": 24,
+            "setup_unknown": 0,
+            "task_correct_receipt": 17,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "clarification": {
+            "n": 8,
+            "success": 2,
+            "calculator": 6,
+            "setup_correct": 0,
+            "setup_unknown": 8,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          },
+          "plain": {
+            "n": 20,
+            "success": 20,
+            "calculator": 0,
+            "setup_correct": 0,
+            "setup_unknown": 20,
+            "task_correct_receipt": 0,
+            "unnecessary_clarification": 0,
+            "incomplete": [],
+            "truncated": []
+          }
+        }
+      },
+      "paired_vs_original": {
+        "nemotron": {
+          "math": {
+            "interaction_success": {
+              "n": 24,
+              "before": 22,
+              "after": 22,
+              "gains": 2,
+              "losses": 2,
+              "net_gain": 0,
+              "paired_sd": 0.41702882811414954,
+              "paired_se": 0.08512565307587487,
+              "ci95": [
+                -0.16666666666666666,
+                0.16666666666666666
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 24,
+              "before": 4,
+              "after": 24,
+              "gains": 20,
+              "losses": 0,
+              "net_gain": 20,
+              "paired_sd": 0.38069349381344053,
+              "paired_se": 0.07770873402002616,
+              "ci95": [
+                0.6666666666666666,
+                0.9583333333333334
+              ],
+              "exact_mcnemar_p": 1.9073486328125e-06
+            }
+          },
+          "clarification": {
+            "interaction_success": {
+              "n": 8,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 8,
+              "before": 1,
+              "after": 8,
+              "gains": 7,
+              "losses": 0,
+              "net_gain": 7,
+              "paired_sd": 0.3535533905932738,
+              "paired_se": 0.125,
+              "ci95": [
+                0.625,
+                1.0
+              ],
+              "exact_mcnemar_p": 0.015625
+            }
+          },
+          "plain": {
+            "interaction_success": {
+              "n": 20,
+              "before": 20,
+              "after": 20,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 20,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            }
+          }
+        },
+        "qwen": {
+          "math": {
+            "interaction_success": {
+              "n": 24,
+              "before": 22,
+              "after": 24,
+              "gains": 2,
+              "losses": 0,
+              "net_gain": 2,
+              "paired_sd": 0.28232985128663995,
+              "paired_se": 0.05763033956734372,
+              "ci95": [
+                0.0,
+                0.20833333333333334
+              ],
+              "exact_mcnemar_p": 0.5
+            },
+            "calculator": {
+              "n": 24,
+              "before": 4,
+              "after": 18,
+              "gains": 16,
+              "losses": 2,
+              "net_gain": 14,
+              "paired_sd": 0.6538625481582945,
+              "paired_se": 0.13346913374198452,
+              "ci95": [
+                0.2916666666666667,
+                0.8333333333333334
+              ],
+              "exact_mcnemar_p": 0.001312255859375
+            }
+          },
+          "clarification": {
+            "interaction_success": {
+              "n": 8,
+              "before": 0,
+              "after": 2,
+              "gains": 2,
+              "losses": 0,
+              "net_gain": 2,
+              "paired_sd": 0.4629100498862757,
+              "paired_se": 0.16366341767699427,
+              "ci95": [
+                0.0,
+                0.625
+              ],
+              "exact_mcnemar_p": 0.5
+            },
+            "calculator": {
+              "n": 8,
+              "before": 1,
+              "after": 6,
+              "gains": 5,
+              "losses": 0,
+              "net_gain": 5,
+              "paired_sd": 0.5175491695067657,
+              "paired_se": 0.18298126367784995,
+              "ci95": [
+                0.25,
+                0.875
+              ],
+              "exact_mcnemar_p": 0.0625
+            }
+          },
+          "plain": {
+            "interaction_success": {
+              "n": 20,
+              "before": 20,
+              "after": 20,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            },
+            "calculator": {
+              "n": 20,
+              "before": 0,
+              "after": 0,
+              "gains": 0,
+              "losses": 0,
+              "net_gain": 0,
+              "paired_sd": 0.0,
+              "paired_se": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "exact_mcnemar_p": 1.0
+            }
+          }
+        }
+      },
+      "training_pilot_gate": false
+    }
+  ],
+  "repeat_call_changes": {
+    "unmodified": [],
+    "nemotron": [],
+    "qwen": []
+  },
+  "review_sha256": "b0dc6c0f123aa4bf1d5b7d99ca309b67069c6ced3728dc01edc8f330b5bfb769",
+  "note": "Explicit assistant review with model identities hidden; not independent human review. Repeated items not pooled; paired SD is item variation, not training-seed variation."
+}

@@ -1,0 +1,4 @@
+
+# Preserve verbatim model-response whitespace and archived unified-diff context.
+gameterm-thinking/details/questions/*.md whitespace=-blank-at-eol
+gameterm-thinking/training/*.patch whitespace=-blank-at-eol

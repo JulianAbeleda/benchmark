@@ -1,0 +1,290 @@
+[
+  {
+    "index": 0,
+    "expression": "48+48/2",
+    "answer": "72",
+    "result": {
+      "ok": true,
+      "outcome": "48+48/2 = 72"
+    }
+  },
+  {
+    "index": 1,
+    "expression": "12*50/60",
+    "answer": "10",
+    "result": {
+      "ok": true,
+      "outcome": "12*50/60 = 10"
+    }
+  },
+  {
+    "index": 2,
+    "expression": "100-100/2-15-15*2",
+    "answer": "5",
+    "result": {
+      "ok": true,
+      "outcome": "100-100/2-15-15*2 = 5"
+    }
+  },
+  {
+    "index": 3,
+    "expression": "(120-12-12*2)/2",
+    "answer": "42",
+    "result": {
+      "ok": true,
+      "outcome": "(120-12-12*2)/2 = 42"
+    }
+  },
+  {
+    "index": 4,
+    "expression": "3*2*2*52",
+    "answer": "624",
+    "result": {
+      "ok": true,
+      "outcome": "3*2*2*52 = 624"
+    }
+  },
+  {
+    "index": 5,
+    "expression": "(10+10*(1+80/100))*(1+25/100)",
+    "answer": "35",
+    "result": {
+      "ok": true,
+      "outcome": "(10+10*(1+80/100))*(1+25/100) = 35"
+    }
+  },
+  {
+    "index": 6,
+    "expression": "2*16+2*8",
+    "answer": "48",
+    "result": {
+      "ok": true,
+      "outcome": "2*16+2*8 = 48"
+    }
+  },
+  {
+    "index": 7,
+    "expression": "(2*3+2)*2",
+    "answer": "16",
+    "result": {
+      "ok": true,
+      "outcome": "(2*3+2)*2 = 16"
+    }
+  },
+  {
+    "index": 8,
+    "expression": "200-16-30-46-38-11-18",
+    "answer": "41",
+    "result": {
+      "ok": true,
+      "outcome": "200-16-30-46-38-11-18 = 41"
+    }
+  },
+  {
+    "index": 9,
+    "expression": "(8*18+(10-8)*18*(1+1/2))*5",
+    "answer": "990",
+    "result": {
+      "ok": true,
+      "outcome": "(8*18+(10-8)*18*(1+1/2))*5 = 990"
+    }
+  },
+  {
+    "index": 10,
+    "expression": "847/(1+2+2*2)",
+    "answer": "121",
+    "result": {
+      "ok": true,
+      "outcome": "847/(1+2+2*2) = 121"
+    }
+  },
+  {
+    "index": 11,
+    "expression": "(95+15-3*5-4*15)/7",
+    "answer": "5",
+    "result": {
+      "ok": true,
+      "outcome": "(95+15-3*5-4*15)/7 = 5"
+    }
+  },
+  {
+    "index": 12,
+    "expression": "60+60/2-5",
+    "answer": "85",
+    "result": {
+      "ok": true,
+      "outcome": "60+60/2-5 = 85"
+    }
+  },
+  {
+    "index": 13,
+    "expression": "10+10/2+10*2",
+    "answer": "35",
+    "result": {
+      "ok": true,
+      "outcome": "10+10/2+10*2 = 35"
+    }
+  },
+  {
+    "index": 14,
+    "expression": "120/8*20/60",
+    "answer": "5",
+    "result": {
+      "ok": true,
+      "outcome": "120/8*20/60 = 5"
+    }
+  },
+  {
+    "index": 15,
+    "expression": "(6*2.5-6)*500*5*20-2000",
+    "answer": "448000",
+    "result": {
+      "ok": true,
+      "outcome": "(6*2.5-6)*500*5*20-2000 = 448000"
+    }
+  },
+  {
+    "index": 16,
+    "expression": "2500/5*2-200",
+    "answer": "800",
+    "result": {
+      "ok": true,
+      "outcome": "2500/5*2-200 = 800"
+    }
+  },
+  {
+    "index": 17,
+    "expression": "26+15+24-4-6-6*2",
+    "answer": "43",
+    "result": {
+      "ok": true,
+      "outcome": "26+15+24-4-6-6*2 = 43"
+    }
+  },
+  {
+    "index": 18,
+    "expression": "2*2*3+1*2*2",
+    "answer": "16",
+    "result": {
+      "ok": true,
+      "outcome": "2*2*3+1*2*2 = 16"
+    }
+  },
+  {
+    "index": 19,
+    "expression": "(20*2*5+200)/25",
+    "answer": "16",
+    "result": {
+      "ok": true,
+      "outcome": "(20*2*5+200)/25 = 16"
+    }
+  },
+  {
+    "index": 20,
+    "expression": "11+(11+9)+(11+9-13)",
+    "answer": "38",
+    "result": {
+      "ok": true,
+      "outcome": "11+(11+9)+(11+9-13) = 38"
+    }
+  },
+  {
+    "index": 21,
+    "expression": "6*5*3*12",
+    "answer": "1080",
+    "result": {
+      "ok": true,
+      "outcome": "6*5*3*12 = 1080"
+    }
+  },
+  {
+    "index": 22,
+    "expression": "4*2+2-3",
+    "answer": "7",
+    "result": {
+      "ok": true,
+      "outcome": "4*2+2-3 = 7"
+    }
+  },
+  {
+    "index": 23,
+    "expression": "(75-5*7-2*10)/4",
+    "answer": "5",
+    "result": {
+      "ok": true,
+      "outcome": "(75-5*7-2*10)/4 = 5"
+    }
+  },
+  {
+    "index": 24,
+    "expression": "100-15-23",
+    "answer": "62",
+    "result": {
+      "ok": true,
+      "outcome": "100-15-23 = 62"
+    }
+  },
+  {
+    "index": 25,
+    "expression": "175-100*2/5-75*1/3",
+    "answer": "110",
+    "result": {
+      "ok": true,
+      "outcome": "175-100*2/5-75*1/3 = 110"
+    }
+  },
+  {
+    "index": 26,
+    "expression": "2*20/100*1000",
+    "answer": "400",
+    "result": {
+      "ok": true,
+      "outcome": "2*20/100*1000 = 400"
+    }
+  },
+  {
+    "index": 27,
+    "expression": "800*(1-70/100)+400*(1-3/5)",
+    "answer": "400",
+    "result": {
+      "ok": true,
+      "outcome": "800*(1-70/100)+400*(1-3/5) = 400"
+    }
+  },
+  {
+    "index": 28,
+    "expression": "20-4*3",
+    "answer": "8",
+    "result": {
+      "ok": true,
+      "outcome": "20-4*3 = 8"
+    }
+  },
+  {
+    "index": 29,
+    "expression": "600*(25/100)/(40/100-25/100)",
+    "answer": "1000",
+    "result": {
+      "ok": true,
+      "outcome": "600*(25/100)/(40/100-25/100) = 1000"
+    }
+  },
+  {
+    "index": 30,
+    "expression": "2*4*(1-50/100)+2*4*(1-75/100)",
+    "answer": "6",
+    "result": {
+      "ok": true,
+      "outcome": "2*4*(1-50/100)+2*4*(1-75/100) = 6"
+    }
+  },
+  {
+    "index": 31,
+    "expression": "(60*8+30*4)*2",
+    "answer": "1200",
+    "result": {
+      "ok": true,
+      "outcome": "(60*8+30*4)*2 = 1200"
+    }
+  }
+]

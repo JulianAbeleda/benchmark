@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<adapter spryt="native-tool-sft" base="2126a5e8056f4178200f3c30dcac11ac0ebae200fdb8d2b8ff86e2fa2930fcb8" method="lora">
+  <lora r="4" alpha="8.0" last-k="1" targets="ffn_up,ffn_down" />
+  <source sha256="2126a5e8056f4178200f3c30dcac11ac0ebae200fdb8d2b8ff86e2fa2930fcb8" architecture="nemotron_h" />
+  <factors />
+  <target-map>
+    <target adapter="0" tensor="blk.41.ffn_up.weight" shape="12544x3136" layer="41" name="ffn_up" />
+    <target adapter="1" tensor="blk.41.ffn_down.weight" shape="3136x12544" layer="41" name="ffn_down" />
+  </target-map>
+  <training epochs="3" loss-start="0.2524424195289612" loss-end="0.19008944928646088">
+    <eval metric="external-task-gate" before="not-evaluated" after="not-evaluated" gate="pending" />
+  </training>
+  <tensors encoding="base64">
+    <tensor name="lora.0.A" dtype="f32" shape="4,3136" quant="f32">
+      <data omitted="publication-view" />
+    </tensor>
+    <tensor name="lora.0.B" dtype="f32" shape="12544,4" quant="f32">
+      <data omitted="publication-view" />
+    </tensor>
+    <tensor name="lora.1.A" dtype="f32" shape="4,12544" quant="f32">
+      <data omitted="publication-view" />
+    </tensor>
+    <tensor name="lora.1.B" dtype="f32" shape="3136,4" quant="f32">
+      <data omitted="publication-view" />
+    </tensor>
+  </tensors>
+  <provenance schema="daycare.native_tool_sft.v1">
+    <field name="daycare_revision" value="5c5a6ac8a099dd69a391bfd36b3ad81dbb82be9d" />
+    <field name="runner_sha256" value="878f6c46574fcc94745a843cb74249655dc6de25fc0a9327ae992cd8fce63385" />
+    <field name="dataset_sha256" value="f3dd9e26aaec10a7a260b4e46000b797c5ea41c38a57ae23a0e8d87845d165bb" />
+    <field name="envelope_sha256" value="1af1cf8496be505ec13fd3b65476ba80e134dc0d1adfff8ceba61760a18412e7" />
+    <field name="initial_adapter_sha256" value="e350d714b29aba2660b8b46b9cf843b6b2e6073fdba53dfe4919116e2fa0e8d7" />
+    <field name="lr" value="5e-05" />
+    <field name="examples" value="112" />
+  </provenance>
+  <payload-omitted reason="Tensor descriptors retained, weight payloads omitted. Metadata-only view; not a loadable adapter." />
+</adapter>

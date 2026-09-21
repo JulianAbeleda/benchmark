@@ -1,0 +1,389 @@
+{
+  "run_1": {
+    "math": {
+      "final_correct": {
+        "n": 32,
+        "before": 23,
+        "after": 26,
+        "gains": 6,
+        "losses": 3,
+        "net_gain": 3,
+        "paired_sd": 0.5303300858899106,
+        "paired_se": 0.09374999999999999,
+        "ci95": [
+          -0.09375,
+          0.28125
+        ],
+        "exact_mcnemar_p": 0.5078125
+      },
+      "calculator_use": {
+        "n": 32,
+        "before": 19,
+        "after": 9,
+        "gains": 2,
+        "losses": 12,
+        "net_gain": -10,
+        "paired_sd": 0.5922891621605981,
+        "paired_se": 0.1047029207467644,
+        "ci95": [
+          -0.5,
+          -0.125
+        ],
+        "exact_mcnemar_p": 0.012939453125
+      }
+    },
+    "plain": {
+      "final_correct": {
+        "n": 20,
+        "before": 20,
+        "after": 20,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 20,
+        "before": 0,
+        "after": 0,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "selection": {
+      "final_correct": {
+        "n": 16,
+        "before": 12,
+        "after": 15,
+        "gains": 4,
+        "losses": 1,
+        "net_gain": 3,
+        "paired_sd": 0.5439056290693574,
+        "paired_se": 0.13597640726733934,
+        "ci95": [
+          -0.0625,
+          0.4375
+        ],
+        "exact_mcnemar_p": 0.375
+      },
+      "calculator_use": {
+        "n": 16,
+        "before": 0,
+        "after": 0,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "smoke": {
+      "final_correct": {
+        "n": 4,
+        "before": 4,
+        "after": 4,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 4,
+        "before": 4,
+        "after": 4,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "oracle": {
+      "final_correct": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    }
+  },
+  "run_2": {
+    "math": {
+      "final_correct": {
+        "n": 32,
+        "before": 23,
+        "after": 26,
+        "gains": 6,
+        "losses": 3,
+        "net_gain": 3,
+        "paired_sd": 0.5303300858899106,
+        "paired_se": 0.09374999999999999,
+        "ci95": [
+          -0.09375,
+          0.28125
+        ],
+        "exact_mcnemar_p": 0.5078125
+      },
+      "calculator_use": {
+        "n": 32,
+        "before": 19,
+        "after": 9,
+        "gains": 2,
+        "losses": 12,
+        "net_gain": -10,
+        "paired_sd": 0.5922891621605981,
+        "paired_se": 0.1047029207467644,
+        "ci95": [
+          -0.5,
+          -0.125
+        ],
+        "exact_mcnemar_p": 0.012939453125
+      }
+    },
+    "plain": {
+      "final_correct": {
+        "n": 20,
+        "before": 20,
+        "after": 20,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 20,
+        "before": 0,
+        "after": 0,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "selection": {
+      "final_correct": {
+        "n": 16,
+        "before": 12,
+        "after": 15,
+        "gains": 4,
+        "losses": 1,
+        "net_gain": 3,
+        "paired_sd": 0.5439056290693574,
+        "paired_se": 0.13597640726733934,
+        "ci95": [
+          -0.0625,
+          0.4375
+        ],
+        "exact_mcnemar_p": 0.375
+      },
+      "calculator_use": {
+        "n": 16,
+        "before": 0,
+        "after": 0,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "smoke": {
+      "final_correct": {
+        "n": 4,
+        "before": 4,
+        "after": 4,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 4,
+        "before": 4,
+        "after": 4,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    },
+    "oracle": {
+      "final_correct": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      },
+      "calculator_use": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gains": 0,
+        "losses": 0,
+        "net_gain": 0,
+        "paired_sd": 0.0,
+        "paired_se": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "exact_mcnemar_p": 1.0
+      }
+    }
+  },
+  "repeatability": {
+    "nemotron": {
+      "answer_correctness_changes": [],
+      "observed_two_run_score_sd": 0.0,
+      "limit": "Two identical fixed-order repeats do not prove zero variance over arbitrary workloads."
+    },
+    "qwen": {
+      "answer_correctness_changes": [],
+      "observed_two_run_score_sd": 0.0,
+      "limit": "Two identical fixed-order repeats do not prove zero variance over arbitrary workloads."
+    }
+  },
+  "audit": {
+    "nemotron-run-1": {
+      "questions": 80,
+      "requests": 152,
+      "reasoning_content_streams": [],
+      "truncated": [],
+      "incomplete_answer_questions": [
+        "gsm8k-3003"
+      ],
+      "math_unrelated_tool_questions": [],
+      "first_request_parity": "all driver assertions passed",
+      "frozen_hashes_verified": true
+    },
+    "qwen-run-1": {
+      "questions": 80,
+      "requests": 115,
+      "reasoning_content_streams": [],
+      "truncated": [],
+      "incomplete_answer_questions": [],
+      "math_unrelated_tool_questions": [
+        "gsm8k-3022"
+      ],
+      "first_request_parity": "all driver assertions passed",
+      "frozen_hashes_verified": true
+    },
+    "nemotron-run-2": {
+      "questions": 80,
+      "requests": 152,
+      "reasoning_content_streams": [],
+      "truncated": [],
+      "incomplete_answer_questions": [
+        "gsm8k-3003"
+      ],
+      "math_unrelated_tool_questions": [],
+      "first_request_parity": "all driver assertions passed",
+      "frozen_hashes_verified": true
+    },
+    "qwen-run-2": {
+      "questions": 80,
+      "requests": 115,
+      "reasoning_content_streams": [],
+      "truncated": [],
+      "incomplete_answer_questions": [],
+      "math_unrelated_tool_questions": [
+        "gsm8k-3022"
+      ],
+      "first_request_parity": "all driver assertions passed",
+      "frozen_hashes_verified": true
+    }
+  },
+  "interpretation": "Exploratory reused-item comparison, no resolved math accuracy advantage; repeats not pooled as independent samples."
+}

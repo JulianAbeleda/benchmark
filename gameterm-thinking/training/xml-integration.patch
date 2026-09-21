@@ -1,0 +1,707 @@
+commit bd973f4febdb4293c8bd0209a755885b1542c0a7
+Author:     Julian Abeleda <JulianAbeleda@users.noreply.github.com>
+AuthorDate: Mon Sep 21 12:58:38 2026 -0400
+Commit:     Julian Abeleda <JulianAbeleda@users.noreply.github.com>
+CommitDate: Mon Sep 21 12:58:38 2026 -0400
+
+    Unify native LoRA XML checkpoints and derive lossless storage from codec registry
+
+diff --git a/daycare/artifact/codec.py b/daycare/artifact/codec.py
+index 74b2ff9..c42aebf 100644
+--- a/daycare/artifact/codec.py
++++ b/daycare/artifact/codec.py
+@@ -5,31 +5,36 @@ small dict of dispatch functions per the scope doc's "dispatch points, not
+ scattered branches" rule: adding q4k or exi later is a new entry, not a rewrite.
+ """
+ import base64 as _b64
++from dataclasses import dataclass
+ import numpy as np
+ 
++F32 = np.dtype("float32")
++F16 = np.dtype("float16")
++
+ 
+ # ---------------------------------------------------------------- quant ----
+ 
+ def _f16_quantize(arr: np.ndarray):
+     """float32 array -> (raw f16 bytes, scale=None)."""
+-    return arr.astype(np.float16).tobytes(), None
++    return arr.astype(F16).tobytes(), None
+ 
+ 
+ def _f16_dequantize(data: bytes, scale, shape):
+-    return np.frombuffer(data, dtype=np.float16).reshape(shape).astype(np.float32)
++    return np.frombuffer(data, dtype=F16).reshape(shape).astype(F32)
+ 
+ 
+ def _f32_quantize(arr: np.ndarray):
+     """float32 array -> (raw f32 bytes, scale=None)."""
+-    return arr.astype(np.float32).tobytes(), None
++    return arr.astype(F32).tobytes(), None
+ 
+ 
+ def _f32_dequantize(data: bytes, scale, shape):
+-    return np.frombuffer(data, dtype=np.float32).reshape(shape).copy()
++    return np.frombuffer(data, dtype=F32).reshape(shape).copy()
+ 
+ 
+ def _int8_quantize(arr: np.ndarray):
+     """Per-tensor symmetric int8 quant: (int8 bytes, absmax scale)."""
++    arr = arr.astype(F32, copy=False)
+     absmax = float(np.abs(arr).max())
+     scale = (absmax / 127.0) if absmax > 0 else 1.0
+     q = np.clip(np.round(arr / scale), -127, 127).astype(np.int8)
+@@ -38,25 +43,53 @@ def _int8_quantize(arr: np.ndarray):
+ 
+ def _int8_dequantize(data: bytes, scale, shape):
+     q = np.frombuffer(data, dtype=np.int8).reshape(shape)
+-    return (q.astype(np.float32) * scale).astype(np.float32)
++    return (q.astype(F32) * scale).astype(F32)
++
+ 
++@dataclass(frozen=True)
++class TensorCodec:
++    encode: object
++    decode: object
++    lossless_dtype: np.dtype | None
++    ggml_type: int | None = None
+ 
++
++# One authority for supported storage types, lossless selection, and GGUF mapping.
+ QUANT = {
+-    "f32": (_f32_quantize, _f32_dequantize),
+-    "f16": (_f16_quantize, _f16_dequantize),
+-    "int8": (_int8_quantize, _int8_dequantize),
++    "f32": TensorCodec(_f32_quantize, _f32_dequantize, F32, 0),
++    "f16": TensorCodec(_f16_quantize, _f16_dequantize, F16, 1),
++    "int8": TensorCodec(_int8_quantize, _int8_dequantize, None),
+ }
+ 
+ 
++def resolve_quant(arr: np.ndarray, policy: str, *, preserve_vectors: bool = False) -> str:
++    """Resolve a storage policy before any dtype coercion can discard precision."""
++    arr = np.asarray(arr)
++    if policy == "lossless":
++        matches = [name for name, spec in QUANT.items()
++                   if spec.lossless_dtype is not None and spec.lossless_dtype == arr.dtype.newbyteorder("=")]
++        if len(matches) != 1:
++            raise ValueError(f"no lossless artifact codec for dtype {arr.dtype}")
++        return matches[0]
++    if policy not in QUANT:
++        raise ValueError(f"unsupported artifact quantization: {policy}")
++    # The GGUF-compatible package policy keeps F16 model vectors/scalars in F32.
++    return "f32" if preserve_vectors and policy == "f16" and arr.ndim < 2 else policy
++
++
++def lossless_equal(original: np.ndarray, restored: np.ndarray) -> bool:
++    resolve_quant(original, "lossless")
++    return (original.shape == restored.shape and
++            restored.astype(original.dtype).tobytes() == original.tobytes())
++
++
+ def quantize(arr: np.ndarray, quant: str):
+-    """arr -> (payload_bytes, scale)."""
+-    fn, _ = QUANT[quant]
+-    return fn(arr)
++    """arr -> (payload_bytes, scale). Call resolve_quant to persist concrete metadata."""
++    return QUANT[resolve_quant(arr, quant)].encode(arr)
+ 
+ 
+ def dequantize(data: bytes, scale, shape, quant: str) -> np.ndarray:
+-    _, fn = QUANT[quant]
+-    return fn(data, scale, shape)
++    return QUANT[quant].decode(data, scale, shape)
+ 
+ 
+ # ------------------------------------------------------------- encoding ----
+diff --git a/daycare/artifact/gguf_kv.py b/daycare/artifact/gguf_kv.py
+index ccd627d..375778f 100644
+--- a/daycare/artifact/gguf_kv.py
++++ b/daycare/artifact/gguf_kv.py
+@@ -11,7 +11,7 @@ Types are what make the XML artifact self-describing, so we capture them.
+ 
+ The tinygrad import is confined to `read_gguf` (below), not module scope: only
+ the read direction needs tinygrad's primitive readers. The write direction and
+-the format constants (MAGIC, GGML_FOR_QUANT, ...) are pure struct/stdlib, and
++the format constants use struct and the NumPy-only artifact codec registry, and
+ daycare/artifact/export.py's preflight (can_export) needs exactly those without
+ paying the vendored-tinygrad dependency -- see trainer_env.use_train_tinygrad.
+ """
+@@ -20,6 +20,8 @@ from __future__ import annotations
+ import io
+ import struct
+ 
++from .codec import QUANT
++
+ # GGUF KV type codes -- mirrors tinygrad's `readers` table.
+ NAMES = {0: "u8", 1: "i8", 2: "u16", 3: "i16", 4: "u32", 5: "i32", 6: "f32",
+          7: "bool", 8: "str", 9: "arr", 10: "u64", 11: "i64", 12: "f64"}
+@@ -28,8 +30,8 @@ _PACK = {0: "<B", 1: "<b", 2: "<H", 3: "<h", 4: "<I", 5: "<i", 6: "<f",
+          7: "<?", 10: "<Q", 11: "<q", 12: "<d"}
+ 
+ # ggml tensor data types we emit
+-GGML_F32, GGML_F16 = 0, 1
+-GGML_FOR_QUANT = {"f16": GGML_F16, "f32": GGML_F32}
++GGML_FOR_QUANT = {name: spec.ggml_type for name, spec in QUANT.items() if spec.ggml_type is not None}
++GGML_F32, GGML_F16 = GGML_FOR_QUANT["f32"], GGML_FOR_QUANT["f16"]
+ 
+ MAGIC, VERSION, ALIGNMENT = b"GGUF", 3, 32
+ 
+diff --git a/daycare/artifact/manifest.py b/daycare/artifact/manifest.py
+index 4ba933a..761d6e4 100644
+--- a/daycare/artifact/manifest.py
++++ b/daycare/artifact/manifest.py
+@@ -23,7 +23,7 @@ class AdapterManifest:
+     spryt: str
+     base: str
+     r: int
+-    alpha: int
++    alpha: float
+     last_k: int
+     targets: list[str]
+     epochs: int
+@@ -116,7 +116,7 @@ class AdapterManifest:
+             base=el.get("base"),
+             method=el.get("method", "lora"),
+             r=int(lora.get("r")),
+-            alpha=int(lora.get("alpha")),
++            alpha=float(lora.get("alpha")),
+             last_k=int(lora.get("last-k")),
+             targets=lora.get("targets").split(","),
+             epochs=int(training.get("epochs")),
+diff --git a/daycare/artifact/native_lora.py b/daycare/artifact/native_lora.py
+new file mode 100644
+index 0000000..209c201
+--- /dev/null
++++ b/daycare/artifact/native_lora.py
+@@ -0,0 +1,84 @@
++"""Native-tool LoRA checkpoint boundary: dtype-derived lossless XML, legacy NPZ reads."""
++from pathlib import Path
++import hashlib
++import json
++import xml.etree.ElementTree as ET
++
++import numpy as np
++
++from . import codec
++from .load import load_adapter
++from .save import write_adapter
++
++
++def digest(path):
++    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
++
++
++def checkpoint_path(directory, record):
++    name = record.get('adapter_file', 'adapter.npz')
++    if Path(name).name != name or name not in ('adapter.xml', 'adapter.npz'):
++        raise ValueError('invalid adapter filename in training record')
++    return Path(directory) / name
++
++
++def validate_metadata(manifest, record):
++    """Do not apply shape-compatible matrices to a different base, target, or scale."""
++    for actual, expected, label in (
++        (manifest.r, record['rank'], 'rank'),
++        (manifest.alpha, record['alpha'], 'alpha'),
++        (manifest.source_sha256, record['model_sha256'], 'base model'),
++        (json.dumps(manifest.target_map, sort_keys=True),
++         json.dumps(record['target_map'], sort_keys=True), 'target map'),
++    ):
++        if actual != expected:
++            raise ValueError(f'adapter {label} differs from training configuration')
++
++
++def read_checkpoint(path, record=None):
++    path = Path(path)
++    if record is not None and digest(path) != record['adapter_sha256']:
++        raise ValueError('adapter hash changed')
++    if path.suffix == '.xml':
++        manifest, tensors = load_adapter(str(path))
++        if record is not None:
++            validate_metadata(manifest, record)
++        return manifest, tensors
++    if path.suffix != '.npz':
++        raise ValueError('adapter must be XML or legacy NPZ')
++    with np.load(path, allow_pickle=False) as saved:
++        tensors = {}
++        for key in saved.files:
++            index, sep, name = key.partition('_')
++            if not sep or not index.isdigit() or name not in ('A', 'B'):
++                raise ValueError('invalid legacy adapter tensor name')
++            tensors[f'lora.{int(index)}.{name}'] = saved[key].copy()
++    return None, tensors
++
++
++def write_checkpoint(path, tensors, record):
++    """Request lossless storage; codec policy owns concrete tensor dtypes."""
++    if any(not np.isfinite(value).all() for value in tensors.values()):
++        raise ValueError('native LoRA checkpoint requires finite tensors')
++    losses = record['losses']
++    meta = dict(spryt='native-tool-sft', base=record['model_sha256'],
++                r=record['rank'], alpha=record['alpha'], last_k=record['last_k'],
++                targets=list(dict.fromkeys(t['target'] for t in record['target_map'])),
++                epochs=record['epochs'], loss_start=losses[0]['loss'], loss_end=losses[-1]['loss'],
++                eval_metric='external-task-gate', eval_before='not-evaluated',
++                eval_after='not-evaluated', eval_gate='pending', method='lora',
++                source_sha256=record['model_sha256'],
++                architecture=record['model_profile']['architecture'], target_map=record['target_map'])
++    write_adapter(tensors, meta, str(path), quant='lossless')
++    tree = ET.parse(path)
++    provenance = ET.SubElement(tree.getroot(), 'provenance', schema=record['schema'])
++    for key in ('daycare_revision', 'runner_sha256', 'dataset_sha256', 'envelope_sha256',
++                'initial_adapter_sha256', 'seed', 'lr', 'examples'):
++        if record.get(key) is not None:
++            ET.SubElement(provenance, 'field', name=key, value=str(record[key]))
++    ET.indent(tree)
++    tree.write(path, encoding='utf-8', xml_declaration=True)
++    manifest, restored = read_checkpoint(path)
++    validate_metadata(manifest, record)
++    if set(restored) != set(tensors) or any(not codec.lossless_equal(v, restored[k]) for k, v in tensors.items()):
++        raise ValueError('XML adapter did not round-trip exactly')
+diff --git a/daycare/artifact/package.py b/daycare/artifact/package.py
+index 24a4b9a..393e6e1 100644
+--- a/daycare/artifact/package.py
++++ b/daycare/artifact/package.py
+@@ -46,11 +46,8 @@ def write_package(pkg_dir: str, manifest: mf.ModelManifest, tensors, quant: str
+     specs, offset = [], 0
+     with open(os.path.join(pkg_dir, "weights", BLOB), "wb") as f:
+         for name, arr in items:
+-            arr = np.ascontiguousarray(np.asarray(arr, dtype=np.float32))
+-            # llama.cpp evaluates normalization vectors in F32 for several
+-            # architectures.  A nominal F16 model is therefore mixed precision:
+-            # matrix weights are F16, vectors/scalars remain F32.
+-            tensor_quant = "f32" if quant == "f16" and arr.ndim < 2 else quant
++            arr = np.ascontiguousarray(np.asarray(arr))
++            tensor_quant = codec.resolve_quant(arr, quant, preserve_vectors=True)
+             payload, scale = codec.quantize(arr, tensor_quant)
+             f.write(payload)                              # raw, uncompressed
+             specs.append(index.TensorSpec(
+diff --git a/daycare/artifact/save.py b/daycare/artifact/save.py
+index 3532178..18c5c23 100644
+--- a/daycare/artifact/save.py
++++ b/daycare/artifact/save.py
+@@ -17,12 +17,13 @@ from . import manifest as mf
+ def write_adapter(tensors: dict[str, np.ndarray], meta: dict, path: str, quant: str = "int8") -> None:
+     specs = []
+     for name, arr in tensors.items():
+-        arr = np.ascontiguousarray(np.asarray(arr, dtype=np.float32))
+-        payload, scale = codec.quantize(arr, quant)
++        arr = np.ascontiguousarray(np.asarray(arr))
++        tensor_quant = codec.resolve_quant(arr, quant)
++        payload, scale = codec.quantize(arr, tensor_quant)
+         b64 = codec.ENCODING["base64"][0](payload)
+         specs.append(index.TensorSpec(
+-            name=name, dtype=quant, shape=tuple(arr.shape),
+-            quant=quant, scale=scale, encoding="base64", data=b64,
++            name=name, dtype=tensor_quant, shape=tuple(arr.shape),
++            quant=tensor_quant, scale=scale, encoding="base64", data=b64,
+         ))
+     tensors_el = index.to_element(specs, encoding="base64")
+     man = mf.AdapterManifest(
+diff --git a/daycare/nursery/native_tool_sft.py b/daycare/nursery/native_tool_sft.py
+index 74b00fb..cc8773f 100644
+--- a/daycare/nursery/native_tool_sft.py
++++ b/daycare/nursery/native_tool_sft.py
+@@ -257,18 +257,27 @@ def prepare_group(chat, tokenizer, envelope: dict, rows: list[dict]) -> tuple[li
+     return common, prepared
+ 
+ 
+-def load_adapter(path: Path, adapters) -> str:
+-    saved = np.load(path)
+-    expected = {f"{index}_{name}" for index in range(len(adapters)) for name in ("A", "B")}
+-    if set(saved.files) != expected:
++def load_adapter(path: Path, adapters, *, model_sha256=None, rank=None, alpha=None) -> str:
++    from daycare.artifact.native_lora import read_checkpoint, validate_metadata
++    from daycare.nursery.lora import target_map
++    manifest, saved = read_checkpoint(path)
++    if manifest is not None:
++        validate_metadata(manifest, dict(model_sha256=model_sha256, rank=rank, alpha=alpha,
++                                         target_map=target_map(adapters)))
++    expected = {f"lora.{index}.{name}" for index in range(len(adapters)) for name in ("A", "B")}
++    if set(saved) != expected:
+         raise ValueError("initial adapter tensor set differs from current target map")
++    # Validate every tensor before mutating any model state.
++    for index, adapter in enumerate(adapters):
++        for name in ("A", "B"):
++            value = saved[f"lora.{index}.{name}"]
++            if tuple(value.shape) != tuple(getattr(adapter, name).shape) or not np.isfinite(value).all():
++                raise ValueError("initial adapter tensor shape or values differ from current target")
+     from tinygrad import Tensor
+     for index, adapter in enumerate(adapters):
+         for name in ("A", "B"):
+-            tensor, value = getattr(adapter, name), saved[f"{index}_{name}"]
+-            if tuple(value.shape) != tuple(tensor.shape):
+-                raise ValueError("initial adapter tensor shape differs from current target")
+-            tensor.assign(Tensor(value, device=tensor.device)).realize()
++            tensor = getattr(adapter, name)
++            tensor.assign(Tensor(saved[f"lora.{index}.{name}"], device=tensor.device)).realize()
+     return file_sha256(path)
+ 
+ 
+@@ -331,7 +340,9 @@ def run(args):
+ 
+     Tensor.manual_seed(dataset["seed"])
+     adapters = apply_lora(model, r=args.rank, alpha=args.alpha, last_k=args.last_k)
+-    initial_sha = load_adapter(args.init_adapter, adapters) if args.init_adapter else None
++    model_sha = file_sha256(args.model)
++    initial_sha = load_adapter(args.init_adapter, adapters, model_sha256=model_sha,
++                               rank=args.rank, alpha=args.alpha) if args.init_adapter else None
+     freeze_model(model)
+     params = lora_params(adapters)
+     for parameter in params:
+@@ -368,18 +379,21 @@ def run(args):
+             losses.append({"step": len(losses) + 1, "epoch": epoch, "id": row["id"],
+                            "group": row["group"], "loss": value, "grad_norm": grad_norm})
+             write_json(args.output / "progress.json", {"complete": False, "losses": losses})
+-    adapter_path = args.output / "adapter.npz"
+-    np.savez(adapter_path, **{f"{index}_{name}": getattr(adapter, name).numpy().copy()
+-                              for index, adapter in enumerate(adapters) for name in ("A", "B")})
++    from daycare.artifact.native_lora import write_checkpoint
++    adapter_path = args.output / "adapter.xml"
+     result = {"schema": SCHEMA, "complete": True, "daycare_revision": revision,
+               "runner_sha256": file_sha256(Path(__file__)), "dataset_sha256": file_sha256(args.dataset),
+-              "envelope_sha256": file_sha256(args.envelope), "model_sha256": file_sha256(args.model),
+-              "initial_adapter_sha256": initial_sha, "adapter_sha256": file_sha256(adapter_path),
++              "envelope_sha256": file_sha256(args.envelope), "model_sha256": model_sha,
++              "initial_adapter_sha256": initial_sha, "adapter_file": adapter_path.name,
++              "adapter_format": "daycare-xml-lossless", "seed": dataset["seed"],
+               "model_profile": profile,
+               "examples": len(rows), "toolsets": len(toolset_groups(rows)), "epochs": args.epochs,
+               "rank": args.rank, "alpha": args.alpha, "lr": args.lr, "last_k": args.last_k,
+               "target_map": target_map(adapters),
+               "seconds": time.time() - started, "losses": losses}
++    write_checkpoint(adapter_path, {f"lora.{index}.{name}": getattr(adapter, name).numpy().copy()
++                      for index, adapter in enumerate(adapters) for name in ("A", "B")}, result)
++    result["adapter_sha256"] = file_sha256(adapter_path)
+     write_json(args.output / "run.json", result)
+     write_json(args.output / "progress.json", result)
+     return result
+diff --git a/research/lora-training-standard.md b/research/lora-training-standard.md
+index 4c5b370..96047b4 100644
+--- a/research/lora-training-standard.md
++++ b/research/lora-training-standard.md
+@@ -44,7 +44,10 @@ rules. The native tool implementation is `daycare.nursery.native_tool_sft`.
+ 8. Reject a candidate that misses a predeclared primary or retention gate.
+    Statistical uncertainty is context for the size of a change, not permission
+    to rename a measured loss as an improvement.
+-9. Keep training outputs and weights outside Git. Commit the reusable runner,
++9. Save native-tool adapters with the shared XML checkpoint writer using a lossless
++   dtype-derived storage policy; verify reload equality and record base/target/provenance metadata.
++   Keep legacy NPZ reads for archived experiments. Do not silently quantize an
++   adapter during serialization. Keep training outputs and weights outside Git. Commit the reusable runner,
+    frozen protocol description, and an honest result record.
+ 
+ ## Research basis
+diff --git a/research/native-tool-sft.md b/research/native-tool-sft.md
+index 79997d1..03c0a6b 100644
+--- a/research/native-tool-sft.md
++++ b/research/native-tool-sft.md
+@@ -127,3 +127,55 @@ The first run under this contract is recorded in
+ after a paired 256-item holdout exposed exactly the fallback-label failure in
+ rule 8. That result is DayCare's local evidence for making shortlist-conditioned
+ label coverage part of the standard rather than an optional data preference.
++
++## XML checkpoint integration
++
++The native trainer now writes `adapter.xml` through DayCare's shared artifact
++writer with a **lossless** storage policy derived from each tensor dtype and verifies byte-exact reload before
++recording completion. XML stores the base-model hash, rank/alpha, exact tensor
++destinations, training settings and input/code provenance. Evaluation is marked
++pending; completing optimization never implies passing the external task gate.
++`run.json` remains the detailed loss/provenance ledger and declares
++`adapter_file` and `adapter_format`. Dataset/envelope input remains JSON, and
++feature caches remain NPZ; this is XML adapter integration, not a claim that
++every internal file is XML.
++
++Continuation accepts XML and legacy NPZ. XML additionally validates the base
++hash, rank, alpha and destination map before assigning any tensors. The Nemotron
++merge/export consumer follows the recorded adapter filename, accepts both
++formats, and verifies its hash. Fractional alpha is preserved by XML parsing.
++
++The original implementation introduced in `4cc927e` wrote NPZ directly and
++bypassed the existing XML writer. No documented rationale was found. Historical
++experiments therefore remain NPZ experiments. To create an explicitly later,
++lossless XML copy without modifying the historical directory:
++
++```sh
++python3 scripts/convert_native_lora_xml.py --run /path/to/original/train \
++  --output /path/to/new-xml-conversion
++```
++
++The converter refuses an existing destination, checks the original adapter hash,
++and records both source hashes and byte-equality proof. It performs no training.
++The real `calculator-verified-sft-001` adapter was converted into a separate
++runtime directory; all four float32 tensors round-trip exactly. Its historical
++NPZ SHA-256 is `ed8ee92b7c9405f4838c353fce4accc553abbd226459acbe5dc105d1a3b07194`.
++This proves serialization parity, not an accuracy improvement or an adoption
++gate. A CPU fixture also executes optimization, XML save, reload, and continued
++optimization through the native runner.
++
++Authority review: `daycare.artifact.native_lora` owns checkpoint compatibility;
++the existing XML codec/manifest owns serialization. Training and the historical
++Nemotron exporter are callers. The shared codec now owns dtype/storage selection as well as tensor encoding.
++The general decoder backend and inference harness are unchanged. This addition crosses the 18,000-line product review
++threshold, remains under the 20,000-line hard budget, and avoids
++duplicating the existing XML serializer.
++
++Storage type authority is `daycare.artifact.codec`: its registry defines
++supported dtypes, codecs and GGUF tensor IDs. Both XML adapters and model
++packages resolve storage there before any cast. Lossless selection currently
++supports float16 and float32 and rejects unsupported types (including float64
++and unregistered BF16) rather than silently narrowing. Explicit lossy policies
++remain available. Native checkpoints request the policy, not a specific quant.
++The XML records each tensor's concrete derived format; decoding continues to
++return the artifact layer's float32 compute representation.
+diff --git a/research/nemotron-tool-calling/merge_candidate.py b/research/nemotron-tool-calling/merge_candidate.py
+index 92767ae..9425021 100644
+--- a/research/nemotron-tool-calling/merge_candidate.py
++++ b/research/nemotron-tool-calling/merge_candidate.py
+@@ -7,7 +7,7 @@ import json
+ from pathlib import Path
+ import shutil
+ 
+-import numpy as np
++from daycare.artifact.native_lora import checkpoint_path, read_checkpoint
+ import torch
+ from safetensors.torch import load_file, save_file
+ 
+@@ -27,17 +27,20 @@ def sha(path):
+ 
+ 
+ def run(args):
+-    progress = json.loads((args.run / "training-progress.json").read_text())
+-    adapter_path = args.run / "adapter.npz"
++    record_path = args.run / "run.json"
++    if not record_path.exists():
++        record_path = args.run / "training-progress.json"
++    progress = json.loads(record_path.read_text())
++    adapter_path = checkpoint_path(args.run, progress)
+     if not progress.get("complete") or sha(adapter_path) != progress["adapter_sha256"]:
+         raise ValueError("training output is incomplete or adapter hash changed")
++    _, saved = read_checkpoint(adapter_path, progress)
+     source = args.base / "model.safetensors"
+     args.output.mkdir(parents=True, exist_ok=False)
+     for path in args.base.iterdir():
+         if path.name != "model.safetensors" and path.is_file():
+             shutil.copy2(path, args.output / path.name)
+     tensors = load_file(str(source), device="cpu")
+-    saved = np.load(adapter_path)
+     touched = []
+     scale = progress["alpha"] / progress["rank"]
+     for item in progress["target_map"]:
+@@ -46,7 +49,7 @@ def run(args):
+         if hf_name is None or hf_name not in tensors:
+             raise ValueError(f"unmapped adapter target: {gguf_name}")
+         base = tensors[hf_name]
+-        delta = torch.from_numpy(saved[f"{index}_B"] @ saved[f"{index}_A"]) * scale
++        delta = torch.from_numpy(saved[f"lora.{index}.B"] @ saved[f"lora.{index}.A"]) * scale
+         if tuple(delta.shape) != tuple(base.shape):
+             raise ValueError(f"shape mismatch for {hf_name}")
+         tensors[hf_name] = (base.float() + delta).to(torch.bfloat16)
+diff --git a/scripts/convert_native_lora_xml.py b/scripts/convert_native_lora_xml.py
+new file mode 100644
+index 0000000..7dd1131
+--- /dev/null
++++ b/scripts/convert_native_lora_xml.py
+@@ -0,0 +1,42 @@
++"""Losslessly convert a recorded native LoRA checkpoint into a NEW XML run directory."""
++import argparse
++import json
++from pathlib import Path
++import sys
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from daycare.artifact.native_lora import checkpoint_path, digest, read_checkpoint, write_checkpoint
++
++
++def convert(source, output):
++    source, output = Path(source).resolve(), Path(output).resolve()
++    record_path = source / 'run.json'
++    if not record_path.exists():
++        record_path = source / 'training-progress.json'
++    record = json.loads(record_path.read_text())
++    if not record.get('complete'):
++        raise ValueError('source training did not complete')
++    adapter = checkpoint_path(source, record)
++    _, tensors = read_checkpoint(adapter, record)
++    output.mkdir(parents=True, exist_ok=False)
++    converted = dict(record, adapter_file='adapter.xml', adapter_format='daycare-xml-lossless',
++                     conversion={'source_adapter': str(adapter), 'source_adapter_sha256': digest(adapter),
++                                 'source_record': str(record_path), 'source_record_sha256': digest(record_path),
++                                 'note': 'Post-training format conversion; no optimization or evaluation performed.'})
++    destination = output / 'adapter.xml'
++    write_checkpoint(destination, tensors, converted)
++    converted['adapter_sha256'] = digest(destination)
++    (output / 'run.json').write_text(json.dumps(converted, indent=2) + '\n')
++    proof = dict(tensors=len(tensors), tensor_bytes_equal=True, source_dtypes=sorted({str(v.dtype) for v in tensors.values()}),
++                 source_adapter_sha256=digest(adapter), xml_adapter_sha256=digest(destination),
++                 source_record_sha256=digest(record_path), retrained=False)
++    (output / 'conversion-proof.json').write_text(json.dumps(proof, indent=2) + '\n')
++    return proof
++
++
++if __name__ == '__main__':
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--run', type=Path, required=True)
++    parser.add_argument('--output', type=Path, required=True)
++    args = parser.parse_args()
++    print(json.dumps(convert(args.run, args.output), indent=2))
+diff --git a/tests/test_artifact_codec.py b/tests/test_artifact_codec.py
+index 4b35105..d679a6a 100644
+--- a/tests/test_artifact_codec.py
++++ b/tests/test_artifact_codec.py
+@@ -85,3 +85,18 @@ def test_tensors_element_roundtrip_base64():
+ 
+     assert encoding == "base64"
+     assert specs2 == specs
++
++
++def test_lossless_policy_rejects_unsupported_types_before_coercion():
++    import pytest
++    for dtype in (np.float16, np.float32):
++        source = np.array([0.125, -0.0, 1.5], dtype=dtype)
++        quant = codec.resolve_quant(source, 'lossless')
++        data, scale = codec.quantize(source, quant)
++        restored = codec.dequantize(data, scale, source.shape, quant)
++        assert codec.lossless_equal(source, restored)
++    for dtype in (np.float64, np.int32, np.int8):
++        with pytest.raises(ValueError, match='no lossless'):
++            codec.resolve_quant(np.ones(2, dtype=dtype), 'lossless')
++    with pytest.raises(ValueError, match='unsupported artifact quantization'):
++        codec.resolve_quant(np.ones(2), 'invented')
+diff --git a/tests/test_native_lora_xml.py b/tests/test_native_lora_xml.py
+new file mode 100644
+index 0000000..3a00e8e
+--- /dev/null
++++ b/tests/test_native_lora_xml.py
+@@ -0,0 +1,129 @@
++import copy
++import json
++from pathlib import Path
++from types import SimpleNamespace
++
++import numpy as np
++import pytest
++
++from daycare.artifact.native_lora import (
++    checkpoint_path, digest, read_checkpoint, validate_metadata, write_checkpoint,
++)
++
++
++def example():
++    tensors = {'lora.0.A': np.array([[0.12345679, -0.9876543, 1e-7]], dtype=np.float32),
++               'lora.0.B': np.array([[0.31415927], [-0.27182818]], dtype=np.float32)}
++    record = dict(schema='daycare.native_tool_sft.v1', model_sha256='base-hash', rank=1,
++                  alpha=2.5, last_k=1, epochs=1, losses=[{'loss': 1.0}],
++                  model_profile={'architecture': 'fixture'}, dataset_sha256='dataset-hash',
++                  target_map=[dict(index=0, layer=0, target='ffn_up',
++                                   tensor='blk.0.ffn_up.weight', shape=[2, 3])])
++    return tensors, record
++
++
++def test_xml_is_lossless_with_fractional_alpha_and_rejects_mismatched_identity(tmp_path):
++    tensors, record = example()
++    path = tmp_path / 'adapter.xml'
++    write_checkpoint(path, tensors, record)
++    record.update(adapter_file='adapter.xml', adapter_sha256=digest(path))
++    manifest, restored = read_checkpoint(checkpoint_path(tmp_path, record), record)
++    assert manifest.alpha == 2.5 and manifest.eval_gate == 'pending'
++    assert 'quant="f32"' in path.read_text()
++    for key, tensor in tensors.items():
++        assert restored[key].tobytes() == tensor.tobytes()
++    for key, value in [('alpha', 3), ('rank', 2), ('model_sha256', 'wrong')]:
++        with pytest.raises(ValueError, match='differs'):
++            validate_metadata(manifest, dict(record, **{key: value}))
++    wrong = copy.deepcopy(record)
++    wrong['target_map'][0]['tensor'] = 'blk.7.ffn_up.weight'
++    with pytest.raises(ValueError, match='target map'):
++        validate_metadata(manifest, wrong)
++    path.write_text(path.read_text() + '\n')
++    with pytest.raises(ValueError, match='hash changed'):
++        read_checkpoint(path, record)
++
++
++def test_legacy_checkpoint_maps_to_same_merge_delta(tmp_path):
++    tensors, record = example()
++    np.savez(tmp_path / 'adapter.npz', **{k.replace('lora.', '').replace('.', '_'): v for k, v in tensors.items()})
++    write_checkpoint(tmp_path / 'adapter.xml', tensors, record)
++    _, legacy = read_checkpoint(checkpoint_path(tmp_path, {}))
++    _, xml = read_checkpoint(tmp_path / 'adapter.xml')
++    np.testing.assert_array_equal(legacy['lora.0.B'] @ legacy['lora.0.A'],
++                                  xml['lora.0.B'] @ xml['lora.0.A'])
++    with pytest.raises(ValueError, match='filename'):
++        checkpoint_path(tmp_path, {'adapter_file': '../adapter.xml'})
++
++
++def test_native_training_writes_xml_and_continues_from_it(tmp_path, monkeypatch):
++    from daycare.nursery import lora, native_tool_sft as trainer
++    from daycare.model import decoder_forward
++    from tinygrad import Tensor
++    from tinygrad.nn import Linear
++
++    class Block:
++        block_type = 'mlp'
++        def __init__(self):
++            self.ffn_up = Linear(3, 4, bias=False)
++            self.ffn_down = Linear(4, 3, bias=False)
++        def __call__(self, value):
++            return self.ffn_down(self.ffn_up(value).relu())
++
++    class Model:
++        def __init__(self):
++            self.blk = [Block()]
++            self.output = Linear(3, 5, bias=False)
++        def prime(self, *args, **kwargs):
++            return None
++        def suffix(self, tokens, *args, **kwargs):
++            return Tensor.ones(1, len(tokens), 3)
++        def output_norm(self, value):
++            return value
++
++    model_file = tmp_path / 'base.gguf'; model_file.write_bytes(b'fixture')
++    envelope = tmp_path / 'envelope.json'; envelope.write_text('{}')
++    dataset_file = tmp_path / 'dataset.json'; dataset_file.write_text('{}')
++    rows = [dict(id='one', group='plain', tool_names=[], prompt_ids=[1], completion_ids=[2])]
++    monkeypatch.setattr(decoder_forward, 'load', lambda *a, **kw: (Model(), None, None,
++                        {'general.architecture': 'fixture', 'general.file_type': 32,
++                         'tokenizer.chat_template': ''}))
++    monkeypatch.setattr(trainer, 'source_revision', lambda: 'test-fixture')
++    monkeypatch.setattr(trainer, 'load_dataset', lambda *a: ({'seed': 7, 'envelope': str(envelope)}, rows))
++    monkeypatch.setattr(trainer, 'NativeToolChat', lambda *a: None)
++    monkeypatch.setattr(trainer, 'prepare_group', lambda *a: ([], rows))
++    args = SimpleNamespace(model=model_file, envelope=envelope, dataset=dataset_file,
++                           output=tmp_path / 'first', max_context=32, last_k=1, rank=1,
++                           alpha=2.5, lr=0.001, epochs=1, init_adapter=None)
++    result = trainer.run(args)
++    assert result['adapter_file'] == 'adapter.xml'
++    assert not (args.output / 'adapter.npz').exists()
++    manifest, tensors = read_checkpoint(args.output / 'adapter.xml', result)
++    assert any(np.any(v) for k, v in tensors.items() if k.endswith('.B'))
++    adapters = lora.apply_lora(Model(), r=1, alpha=2.5, last_k=1)
++    trainer.load_adapter(args.output / 'adapter.xml', adapters, model_sha256=digest(model_file), rank=1, alpha=2.5)
++    for i, adapter in enumerate(adapters):
++        for name in ('A', 'B'):
++            np.testing.assert_array_equal(getattr(adapter, name).numpy(), tensors[f'lora.{i}.{name}'])
++    args.init_adapter = args.output / 'adapter.xml'; args.output = tmp_path / 'continued'
++    continued = trainer.run(args)
++    assert continued['initial_adapter_sha256'] == result['adapter_sha256']
++    assert continued['complete'] and len(continued['losses']) == 1
++    assert json.loads((args.output / 'run.json').read_text())['adapter_format'] == 'daycare-xml-lossless'
++
++
++def test_mixed_tensor_dtypes_derive_storage_without_narrowing(tmp_path):
++    from daycare.artifact import codec, index
++    tensors, record = example()
++    tensors['lora.0.A'] = tensors['lora.0.A'].astype(np.float16)
++    path = tmp_path / 'mixed.xml'
++    write_checkpoint(path, tensors, record)
++    manifest, restored = read_checkpoint(path)
++    _, specs = index.from_element(manifest.tensors_el)
++    assert {s.name: s.quant for s in specs} == {'lora.0.A': 'f16', 'lora.0.B': 'f32'}
++    for name in tensors:
++        assert codec.lossless_equal(tensors[name], restored[name])
++    tensors['lora.0.A'] = tensors['lora.0.A'].astype(np.float64)
++    with pytest.raises(ValueError, match='no lossless artifact codec'):
++        write_checkpoint(tmp_path / 'unsupported.xml', tensors, record)
++    assert not (tmp_path / 'unsupported.xml').exists()

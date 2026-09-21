@@ -1,0 +1,8 @@
+{
+  "tensors": 4,
+  "float32_bytes_equal": true,
+  "source_adapter_sha256": "ed8ee92b7c9405f4838c353fce4accc553abbd226459acbe5dc105d1a3b07194",
+  "xml_adapter_sha256": "d4bb866b2fea2c31b264421ffe35de8f590c847b2d15680090813f9a3f92702f",
+  "source_record_sha256": "47dd75e2967b2b0337670b5df33ae35b9266794c66fe077b86d091d6322d8ea9",
+  "retrained": false
+}

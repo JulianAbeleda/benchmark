@@ -1,0 +1,381 @@
+[
+  {
+    "id": "clear-23",
+    "family": "math",
+    "task": "multistep",
+    "request": "A library shelf starts with 45 books, receives 12 donated books and 7 purchased books, then loses 9 checked-out books and 4 discarded books. How many remain on the shelf?",
+    "answer": "51"
+  },
+  {
+    "id": "clear-19",
+    "family": "math",
+    "task": "multistep",
+    "request": "Twenty-nine passengers need transport. Each vehicle has exactly 4 passenger seats, excluding the driver. What is the minimum number of vehicles needed for one trip?",
+    "answer": "8"
+  },
+  {
+    "id": "clear-20",
+    "family": "math",
+    "task": "multistep",
+    "request": "A printer makes 960 cards, packs 8 cards per packet and 6 packets per carton. How many full cartons are produced?",
+    "answer": "20"
+  },
+  {
+    "id": "clear-16",
+    "family": "math",
+    "task": "percent",
+    "request": "A $1000 balance grows by 10% in the first year and then by 10% of the new balance in the second year, with no deposits or withdrawals. What is the final balance?",
+    "answer": "1210"
+  },
+  {
+    "id": "plain-17",
+    "family": "plain",
+    "request": "What is the opposite of empty?",
+    "answer": [
+      "full"
+    ]
+  },
+  {
+    "id": "clarify-05",
+    "family": "clarification",
+    "request": "A $60 purchase qualifies for both a 20% discount and a $10 coupon. What is the final price before tax?",
+    "answer": "Ask whether the coupon is applied before or after the percentage discount."
+  },
+  {
+    "id": "clear-11",
+    "family": "math",
+    "task": "percent",
+    "request": "Exactly 10 of a class's 40 students walk to school. What percentage of the class walks to school?",
+    "answer": "25"
+  },
+  {
+    "id": "plain-14",
+    "family": "plain",
+    "request": "What is the past tense of take?",
+    "answer": [
+      "took"
+    ]
+  },
+  {
+    "id": "clear-15",
+    "family": "math",
+    "task": "percent",
+    "request": "A shop has $1500 revenue and $1020 total costs. Profit margin means profit divided by revenue, multiplied by 100%. What is its profit margin?",
+    "answer": "32"
+  },
+  {
+    "id": "clarify-02",
+    "family": "clarification",
+    "request": "A container holds 3 gallons of water. How many liters is that?",
+    "answer": "Ask whether the gallons are US liquid gallons or imperial gallons."
+  },
+  {
+    "id": "clear-02",
+    "family": "math",
+    "task": "units",
+    "request": "A jug contains 2.4 liters of water. After pouring out 350 milliliters, how many milliliters remain?",
+    "answer": "2050"
+  },
+  {
+    "id": "clear-21",
+    "family": "math",
+    "task": "multistep",
+    "request": "A $1500 sale pays an 18% commission. Three agents split that commission equally. How many dollars does each agent receive?",
+    "answer": "90"
+  },
+  {
+    "id": "clear-17",
+    "family": "math",
+    "task": "multistep",
+    "request": "Seven boxes each contain 12 pencils. Nine pencils are broken and discarded, then 17 good pencils are given away. How many pencils remain?",
+    "answer": "58"
+  },
+  {
+    "id": "clear-08",
+    "family": "math",
+    "task": "units",
+    "request": "A car uses 6 liters of fuel per 100 kilometers. Fuel costs $1.50 per liter. What is the fuel cost of a 180 kilometer trip at that consumption rate?",
+    "answer": "16.2"
+  },
+  {
+    "id": "plain-07",
+    "family": "plain",
+    "request": "What is the chemical symbol for sodium?",
+    "answer": [
+      "Na"
+    ]
+  },
+  {
+    "id": "plain-09",
+    "family": "plain",
+    "request": "What is the plural of child?",
+    "answer": [
+      "children"
+    ]
+  },
+  {
+    "id": "clarify-07",
+    "family": "clarification",
+    "request": "A train travels 120 kilometers. What is its average speed in kilometers per hour?",
+    "answer": "Ask for the trip duration."
+  },
+  {
+    "id": "plain-06",
+    "family": "plain",
+    "request": "What is the chemical symbol for carbon?",
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "plain-08",
+    "family": "plain",
+    "request": "What is the chemical symbol for copper?",
+    "answer": [
+      "Cu"
+    ]
+  },
+  {
+    "id": "clear-12",
+    "family": "math",
+    "task": "percent",
+    "request": "A price drops from $120 to $90. What is the percentage decrease relative to the original price?",
+    "answer": "25"
+  },
+  {
+    "id": "plain-05",
+    "family": "plain",
+    "request": "What is the chemical symbol for oxygen?",
+    "answer": [
+      "O"
+    ]
+  },
+  {
+    "id": "plain-11",
+    "family": "plain",
+    "request": "What is the plural of person?",
+    "answer": [
+      "people",
+      "persons"
+    ]
+  },
+  {
+    "id": "clarify-01",
+    "family": "clarification",
+    "request": "A lamp costs $85 before sales tax. What is the total price including sales tax?",
+    "answer": "Ask for the applicable sales-tax rate; location is acceptable if explicitly used to determine that rate."
+  },
+  {
+    "id": "clear-09",
+    "family": "math",
+    "task": "percent",
+    "request": "A jacket costs $80 before discounts and tax. Apply a 15% discount, then 10% sales tax to the discounted price. What is the final price in dollars?",
+    "answer": "74.8"
+  },
+  {
+    "id": "plain-03",
+    "family": "plain",
+    "request": "What is the capital of Egypt?",
+    "answer": [
+      "Cairo"
+    ]
+  },
+  {
+    "id": "clear-06",
+    "family": "math",
+    "task": "units",
+    "request": "A cyclist travels 4.8 kilometers in 40 minutes. What is the average speed in kilometers per hour?",
+    "answer": "7.2"
+  },
+  {
+    "id": "clear-13",
+    "family": "math",
+    "task": "percent",
+    "request": "A recipe uses 300 grams of flour. A larger batch requires 40% more flour. How many grams of flour does the larger batch require?",
+    "answer": "420"
+  },
+  {
+    "id": "clarify-08",
+    "family": "clarification",
+    "request": "A rectangular garden is 12 meters long. What is its area in square meters?",
+    "answer": "Ask for the garden width or another measurement that determines it."
+  },
+  {
+    "id": "clarify-04",
+    "family": "clarification",
+    "request": "In a class of 30 students, 18 speak Spanish and 14 speak French. How many students speak at least one of these languages?",
+    "answer": "Ask how many students speak both languages, or equivalently how many speak neither."
+  },
+  {
+    "id": "clear-22",
+    "family": "math",
+    "task": "multistep",
+    "request": "A subscription has an $18 base charge including 5 downloads. Each download beyond 5 costs $4.50. With 8 total downloads and no tax, what is the bill?",
+    "answer": "31.5"
+  },
+  {
+    "id": "clear-18",
+    "family": "math",
+    "task": "multistep",
+    "request": "A courier receives a $120 fixed fee plus $5 for each of 42 safely delivered items, and pays an $8 penalty for each of 3 damaged items. What is the net payment?",
+    "answer": "306"
+  },
+  {
+    "id": "plain-16",
+    "family": "plain",
+    "request": "What is the past tense of eat?",
+    "answer": [
+      "ate"
+    ]
+  },
+  {
+    "id": "clear-10",
+    "family": "math",
+    "task": "percent",
+    "request": "A monthly salary of $2400 increases by 7.5%. What is the new monthly salary in dollars?",
+    "answer": "2580"
+  },
+  {
+    "id": "clear-14",
+    "family": "math",
+    "task": "percent",
+    "request": "An 80 liter tank is 62.5% full. Then 12 liters are removed without any refill. How many liters remain?",
+    "answer": "38"
+  },
+  {
+    "id": "plain-13",
+    "family": "plain",
+    "request": "What is the past tense of write?",
+    "answer": [
+      "wrote"
+    ]
+  },
+  {
+    "id": "clear-04",
+    "family": "math",
+    "task": "units",
+    "request": "A repair took 2 hours 35 minutes, followed by 48 more minutes of testing. How many minutes did both activities take in total?",
+    "answer": "203"
+  },
+  {
+    "id": "clarify-03",
+    "family": "clarification",
+    "request": "I need 72 cookies for a party. How many boxes should I buy?",
+    "answer": "Ask how many cookies each box contains."
+  },
+  {
+    "id": "clarify-06",
+    "family": "clarification",
+    "request": "I have 250 euros. How many US dollars will I receive when exchanging them, assuming no fees?",
+    "answer": "Ask for the EUR to USD exchange rate to use; provider/date clarification is acceptable if it explicitly addresses the rate."
+  },
+  {
+    "id": "plain-19",
+    "family": "plain",
+    "request": "What is the opposite of increase?",
+    "answer": [
+      "decrease",
+      "reduce",
+      "reduction"
+    ]
+  },
+  {
+    "id": "clear-03",
+    "family": "math",
+    "task": "units",
+    "request": "I have 17 US dimes and 8 US quarters. After spending 95 cents, how many cents remain?",
+    "answer": "275"
+  },
+  {
+    "id": "plain-02",
+    "family": "plain",
+    "request": "What is the capital of Canada?",
+    "answer": [
+      "Ottawa"
+    ]
+  },
+  {
+    "id": "plain-10",
+    "family": "plain",
+    "request": "What is the plural of foot?",
+    "answer": [
+      "feet"
+    ]
+  },
+  {
+    "id": "plain-04",
+    "family": "plain",
+    "request": "What is the capital of South Korea?",
+    "answer": [
+      "Seoul"
+    ]
+  },
+  {
+    "id": "clear-05",
+    "family": "math",
+    "task": "units",
+    "request": "There are 18 packets weighing 250 grams each and one packet weighing 750 grams. What is their combined weight in kilograms?",
+    "answer": "5.25"
+  },
+  {
+    "id": "plain-18",
+    "family": "plain",
+    "request": "What is the opposite of asleep?",
+    "answer": [
+      "awake"
+    ]
+  },
+  {
+    "id": "clear-01",
+    "family": "math",
+    "task": "units",
+    "request": "Three rolls each contain 1.75 meters of tape. How many centimeters of tape are there in total?",
+    "answer": "525"
+  },
+  {
+    "id": "plain-01",
+    "family": "plain",
+    "request": "What is the capital of Spain?",
+    "answer": [
+      "Madrid"
+    ]
+  },
+  {
+    "id": "clear-07",
+    "family": "math",
+    "task": "units",
+    "request": "A rectangle is 2.5 meters long and 80 centimeters wide. What is its area in square meters?",
+    "answer": "2"
+  },
+  {
+    "id": "clear-24",
+    "family": "math",
+    "task": "multistep",
+    "request": "Three workers each assemble 4 kits per hour for 6 hours. All work those full hours at that constant rate. How many kits do they assemble altogether?",
+    "answer": "72"
+  },
+  {
+    "id": "plain-20",
+    "family": "plain",
+    "request": "What is the opposite of temporary?",
+    "answer": [
+      "permanent"
+    ]
+  },
+  {
+    "id": "plain-12",
+    "family": "plain",
+    "request": "What is the plural of knife?",
+    "answer": [
+      "knives"
+    ]
+  },
+  {
+    "id": "plain-15",
+    "family": "plain",
+    "request": "What is the past tense of see?",
+    "answer": [
+      "saw"
+    ]
+  }
+]

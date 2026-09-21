@@ -1,0 +1,658 @@
+[
+  {
+    "id": "gsm8k-3023-expression",
+    "family": "oracle",
+    "request": "Lola and Dora combined their allowance of $9 each to buy a deck of playing cards for $10, they also bought $2 boxes of stickers and split the boxes evenly. How many packs of stickers did Dora get?\n\nUse calculate with this expression: ((9+9-10)/2)/2. Then answer the original question using the result.",
+    "answer": "2",
+    "source_id": "gsm8k-3023",
+    "variant": "expression"
+  },
+  {
+    "id": "ordinary-4",
+    "family": "plain",
+    "request": "What is the capital of Portugal?",
+    "answer": "Lisbon",
+    "accepted_answers": [
+      "Lisbon"
+    ]
+  },
+  {
+    "id": "gsm8k-3004-expression",
+    "family": "oracle",
+    "request": "Bill is trying to decide whether to make blueberry muffins or raspberry muffins. Blueberries cost $5.00 per 6 ounce carton and raspberries cost $3.00 per 8 ounce carton. If Bill is going to make 4 batches of muffins, and each batch takes 12 ounces of fruit, how much money would he save by using raspberries instead of blueberries?\n\nUse calculate with this expression: (5/6-3/8)*12*4. Then answer the original question using the result.",
+    "answer": "22",
+    "source_id": "gsm8k-3004",
+    "variant": "expression"
+  },
+  {
+    "id": "ordinary-12",
+    "family": "plain",
+    "request": "What is the past tense of speak?",
+    "answer": "spoke",
+    "accepted_answers": [
+      "spoke"
+    ]
+  },
+  {
+    "id": "ordinary-15",
+    "family": "plain",
+    "request": "What is the opposite of victory?",
+    "answer": "defeat",
+    "accepted_answers": [
+      "defeat",
+      "loss"
+    ]
+  },
+  {
+    "id": "gsm8k-3009",
+    "family": "math",
+    "request": "The country of Belize had a 5 lane bridge that had 2000 vehicles passing through it every month. They decided to build a new bridge that had twice the capacity of the old one, and the number of vehicles passing through the new one increased by 60% more than the old bridge. If the bridges work concurrently for a year, calculate the total number of vehicles that pass through the two bridges.",
+    "answer": "62400"
+  },
+  {
+    "id": "gsm8k-3002",
+    "family": "math",
+    "request": "Brenda volunteered to make 3 trays of banana pudding for the family reunion.  Each tray of banana pudding would need 80 wafer cookies.  A box of wafer cookies only had 60 cookies per box.  Each box costs $3.50.  How much will it cost her to buy just enough boxes for 3 trays of banana pudding?",
+    "answer": "14"
+  },
+  {
+    "group": "files",
+    "id": "files-fresh-12",
+    "request": "Read the workspace file tests/input.xml and show its text.",
+    "right": [
+      "read_file",
+      "workspace_folder",
+      "bash"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3019",
+    "family": "math",
+    "request": "Janelle had 26 green marbles. Then she bought 6 bags of blue marbles. There were 10 marbles in each bag.  She created a gift of 6 green marbles and 8 blue marbles and gave it to a friend. How many marbles does Janelle have now?",
+    "answer": "72"
+  },
+  {
+    "id": "gsm8k-3023",
+    "family": "math",
+    "request": "Lola and Dora combined their allowance of $9 each to buy a deck of playing cards for $10, they also bought $2 boxes of stickers and split the boxes evenly. How many packs of stickers did Dora get?",
+    "answer": "2"
+  },
+  {
+    "group": "windows",
+    "id": "windows-fresh-04",
+    "request": "Place Keynote beside Numbers on screen.",
+    "right": [
+      "window_tile",
+      "window_place",
+      "window_list",
+      "window_list_managed",
+      "workspace_open",
+      "app_list",
+      "role_resolve"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3007",
+    "family": "math",
+    "request": "Emily went to the store and bought art supplies for $20 and 2 skirts that cost the same amount of money. She spent a total of $50. How much did Emily pay for each of the skirts?",
+    "answer": "15"
+  },
+  {
+    "id": "smoke-0-natural",
+    "request": "What is (1499 times 12) divided by 7? Round to 2 decimals.",
+    "answer": "2569.71",
+    "family": "smoke",
+    "wording": "natural"
+  },
+  {
+    "id": "gsm8k-3016",
+    "family": "math",
+    "request": "Gary is buying chlorine for his rectangular pool, which is 10 feet long, 8 feet wide, and 6 feet deep. Gary needs to buy one quart of chlorine for every 120 cubic feet of water in his pool. If chlorine costs $3 a quart, how much does Gary spend on chlorine?",
+    "answer": "12"
+  },
+  {
+    "id": "gsm8k-3005",
+    "family": "math",
+    "request": "Aitana and Jayda went to Silverlake Flea market to buy some handmade crafts. Aitana spent 2/5 times more money than Jayda at the market. If Jayda spent $400, calculate the total amount of money they spent together.",
+    "answer": "960"
+  },
+  {
+    "group": "media",
+    "id": "media-fresh-13",
+    "request": "Play Dream On by Aerosmith.",
+    "right": [
+      "media_play",
+      "media_status",
+      "mcp__provider.spotify__search",
+      "role_resolve",
+      "app_list"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3027",
+    "family": "math",
+    "request": "Mary has a mystery book library. She started with 72 mystery books at the beginning of the year. She joined a book club that sent her 1 book each month of the year. She went to a bookstore halfway through the year and bought 5 more books, then bought 2 books at yard sales later. Her daughter gave her another book for her birthday, and her mother gave her a series of 4 books when Mary visited her. She donated 12 books she didn't want to read again to a charity shop and sold 3 to a used book store. How many books did she have at the end of the year?",
+    "answer": "81"
+  },
+  {
+    "id": "ordinary-8",
+    "family": "plain",
+    "request": "What is the chemical symbol for iron?",
+    "answer": "Fe",
+    "accepted_answers": [
+      "Fe"
+    ]
+  },
+  {
+    "id": "ordinary-7",
+    "family": "plain",
+    "request": "What is the past tense of buy?",
+    "answer": "bought",
+    "accepted_answers": [
+      "bought"
+    ]
+  },
+  {
+    "id": "gsm8k-3014-expression",
+    "family": "oracle",
+    "request": "Travis is hired to take 638 bowls from the factory to the home goods store. The home goods store will pay the moving company a $100 fee, plus $3 for every bowl that is delivered safely. Travis must pay the home goods store $4 each for any bowls that are lost or broken. If 12 bowls are lost, 15 bowls are broken, and the rest are delivered safely, how much should Travis be paid?\n\nUse calculate with this expression: 100+(638-12-15)*3-(12+15)*4. Then answer the original question using the result.",
+    "answer": "1825",
+    "source_id": "gsm8k-3014",
+    "variant": "expression"
+  },
+  {
+    "id": "gsm8k-3026",
+    "family": "math",
+    "request": "Carla has 6 sunflowers and 8 dandelions. The sunflowers have 9 seeds per plant and the dandelions have 12 seeds per plant. What percentage of Carla's seeds come from the dandelions?",
+    "answer": "64"
+  },
+  {
+    "group": "web",
+    "id": "web-fresh-13",
+    "request": "Search online for current Lake Tahoe snow depth.",
+    "right": [
+      "mcp__provider.search__web_search"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "smoke-3-natural",
+    "request": "A shirt costs 24.50. It is 20 percent off. Then 8 percent sales tax is added. What do 3 shirts cost in total?",
+    "answer": "63.5",
+    "family": "smoke",
+    "wording": "natural"
+  },
+  {
+    "id": "gsm8k-3003-expression",
+    "family": "oracle",
+    "request": "In mid-May, the depth of a river in Moreland is measured. By mid-June, the river is 10 feet deeper than mid-May. By mid-July, the river is three times deeper than mid-June. If the river is 45 feet deep in mid-July, how many feet deep was the river in mid-May?\n\nUse calculate with this expression: 45/3-10. Then answer the original question using the result.",
+    "answer": "5",
+    "source_id": "gsm8k-3003",
+    "variant": "expression"
+  },
+  {
+    "id": "smoke-2-natural",
+    "request": "What is the remainder when 1000003 is divided by 97?",
+    "answer": "30",
+    "family": "smoke",
+    "wording": "natural"
+  },
+  {
+    "group": "files",
+    "id": "files-fresh-08",
+    "request": "Read the workspace file docs/api.md and show its text.",
+    "right": [
+      "read_file",
+      "workspace_folder",
+      "bash"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "ordinary-19",
+    "family": "plain",
+    "request": "What is the capital of Germany?",
+    "answer": "Berlin",
+    "accepted_answers": [
+      "Berlin"
+    ]
+  },
+  {
+    "id": "gsm8k-3015-expression",
+    "family": "oracle",
+    "request": "Sam has 19 dimes and 6 quarters. She buys 4 candy bars for 3 dimes each and 1 lollipop for 1 quarter. How much money, in cents, does she have left?\n\nUse calculate with this expression: 19*10+6*25-4*3*10-25. Then answer the original question using the result.",
+    "answer": "195",
+    "source_id": "gsm8k-3015",
+    "variant": "expression"
+  },
+  {
+    "id": "ordinary-18",
+    "family": "plain",
+    "request": "What is the chemical symbol for nitrogen?",
+    "answer": "N",
+    "accepted_answers": [
+      "N"
+    ]
+  },
+  {
+    "id": "ordinary-10",
+    "family": "plain",
+    "request": "What is the opposite of narrow?",
+    "answer": "wide",
+    "accepted_answers": [
+      "wide",
+      "broad"
+    ]
+  },
+  {
+    "id": "gsm8k-3015",
+    "family": "math",
+    "request": "Sam has 19 dimes and 6 quarters. She buys 4 candy bars for 3 dimes each and 1 lollipop for 1 quarter. How much money, in cents, does she have left?",
+    "answer": "195"
+  },
+  {
+    "id": "gsm8k-3031",
+    "family": "math",
+    "request": "Tall Tuna has twice as many fish as Jerk Tuna. If Jerk Tuna has one hundred forty-four fish, how many fish do they have together?",
+    "answer": "432"
+  },
+  {
+    "id": "gsm8k-3000",
+    "family": "math",
+    "request": "A pole is 20 meters long. It got cut in a way that left it 30% shorter. How long is the pole?",
+    "answer": "14"
+  },
+  {
+    "id": "gsm8k-3011",
+    "family": "math",
+    "request": "Thomas is training at the gym to prepare for a competition. He trained for 5 hours every day for a month (30 days). If he continues to train for the next 12 days, how many hours will he spend on training in total?",
+    "answer": "210"
+  },
+  {
+    "id": "gsm8k-3003",
+    "family": "math",
+    "request": "In mid-May, the depth of a river in Moreland is measured. By mid-June, the river is 10 feet deeper than mid-May. By mid-July, the river is three times deeper than mid-June. If the river is 45 feet deep in mid-July, how many feet deep was the river in mid-May?",
+    "answer": "5"
+  },
+  {
+    "group": "files",
+    "id": "files-fresh-09",
+    "request": "Read the workspace file config/agents.yaml and show its text.",
+    "right": [
+      "read_file",
+      "workspace_folder",
+      "bash"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "ordinary-9",
+    "family": "plain",
+    "request": "What is the capital of Italy?",
+    "answer": "Rome",
+    "accepted_answers": [
+      "Rome"
+    ]
+  },
+  {
+    "id": "ordinary-11",
+    "family": "plain",
+    "request": "What is the plural of mouse?",
+    "answer": "mice",
+    "accepted_answers": [
+      "mice"
+    ]
+  },
+  {
+    "id": "ordinary-0",
+    "family": "plain",
+    "request": "What is the opposite of ancient?",
+    "answer": "modern",
+    "accepted_answers": [
+      "modern"
+    ]
+  },
+  {
+    "group": "windows",
+    "id": "windows-fresh-07",
+    "request": "Place Music beside Podcasts on screen.",
+    "right": [
+      "window_tile",
+      "window_place",
+      "window_list",
+      "window_list_managed",
+      "workspace_open",
+      "app_list",
+      "role_resolve"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "ordinary-16",
+    "family": "plain",
+    "request": "What is the plural of woman?",
+    "answer": "women",
+    "accepted_answers": [
+      "women"
+    ]
+  },
+  {
+    "group": "web",
+    "id": "web-fresh-00",
+    "request": "Search online for the current Elixir release.",
+    "right": [
+      "mcp__provider.search__web_search"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3029",
+    "family": "math",
+    "request": "Mr. Roper cuts his lawn 15 days a month beginning in April and ending in September.  From October to the end of March he cuts his lawn three times a month.  What is the average number of times that Mr. Roper cuts his yard per month?",
+    "answer": "9"
+  },
+  {
+    "id": "ordinary-3",
+    "family": "plain",
+    "request": "What is the chemical symbol for gold?",
+    "answer": "Au",
+    "accepted_answers": [
+      "Au"
+    ]
+  },
+  {
+    "id": "gsm8k-3024",
+    "family": "math",
+    "request": "The weights of Christine's two cats are 7 and 10 pounds. What is her dog's weight if its weight is twice the sum of her two cats' weights?",
+    "answer": "34"
+  },
+  {
+    "id": "gsm8k-3022",
+    "family": "math",
+    "request": "Tommy's home is worth 25% more than he bought it for. He sells it and buys a new house that costs $500,000. If he had to take a loan for the 75% he can't pay, how much did he buy his first house for?",
+    "answer": "100000"
+  },
+  {
+    "id": "ordinary-2",
+    "family": "plain",
+    "request": "What is the past tense of swim?",
+    "answer": "swam",
+    "accepted_answers": [
+      "swam"
+    ]
+  },
+  {
+    "id": "gsm8k-3004",
+    "family": "math",
+    "request": "Bill is trying to decide whether to make blueberry muffins or raspberry muffins. Blueberries cost $5.00 per 6 ounce carton and raspberries cost $3.00 per 8 ounce carton. If Bill is going to make 4 batches of muffins, and each batch takes 12 ounces of fruit, how much money would he save by using raspberries instead of blueberries?",
+    "answer": "22"
+  },
+  {
+    "id": "gsm8k-3030",
+    "family": "math",
+    "request": "Together 3 friends watched 411 short videos. Kelsey watched 43 more than Ekon. Ekon watched 17 less than Uma. How many videos did Kelsey watch?",
+    "answer": "160"
+  },
+  {
+    "id": "gsm8k-3008",
+    "family": "math",
+    "request": "A snake's head is one-tenth its length. If a snake is 10 feet long, calculate the length of the rest of its body minus the head.",
+    "answer": "9"
+  },
+  {
+    "id": "gsm8k-3006",
+    "family": "math",
+    "request": "Gretchen's local ice cream shop offers 100 different flavors.  She was able to try a 1/4 of the flavors 2 years ago and double that amount last year.  How many more flavors will she need to try this year to have tried all 100 flavors?",
+    "answer": "25"
+  },
+  {
+    "id": "ordinary-5",
+    "family": "plain",
+    "request": "What is the opposite of shallow?",
+    "answer": "deep",
+    "accepted_answers": [
+      "deep"
+    ]
+  },
+  {
+    "id": "gsm8k-3013",
+    "family": "math",
+    "request": "John is lifting weights. He bench presses 15 pounds for 10 reps and does 3 sets. How much total weight does he move?",
+    "answer": "450"
+  },
+  {
+    "id": "gsm8k-3009-expression",
+    "family": "oracle",
+    "request": "The country of Belize had a 5 lane bridge that had 2000 vehicles passing through it every month. They decided to build a new bridge that had twice the capacity of the old one, and the number of vehicles passing through the new one increased by 60% more than the old bridge. If the bridges work concurrently for a year, calculate the total number of vehicles that pass through the two bridges.\n\nUse calculate with this expression: (2000+2000*(1+60/100))*12. Then answer the original question using the result.",
+    "answer": "62400",
+    "source_id": "gsm8k-3009",
+    "variant": "expression"
+  },
+  {
+    "id": "gsm8k-3012",
+    "family": "math",
+    "request": "Amber is baking cakes for her party. She has invited 8 friends and each one will want two slices of cake. Each cake makes 6 slices. If she bakes 4 cakes, how many slices will be left over at the end if she eats three herself?",
+    "answer": "5"
+  },
+  {
+    "id": "gsm8k-3014",
+    "family": "math",
+    "request": "Travis is hired to take 638 bowls from the factory to the home goods store. The home goods store will pay the moving company a $100 fee, plus $3 for every bowl that is delivered safely. Travis must pay the home goods store $4 each for any bowls that are lost or broken. If 12 bowls are lost, 15 bowls are broken, and the rest are delivered safely, how much should Travis be paid?",
+    "answer": "1825"
+  },
+  {
+    "group": "terminal",
+    "id": "terminal-fresh-07",
+    "request": "Using a shell, list the five largest files.",
+    "right": [
+      "bash",
+      "terminal_open",
+      "terminal_list",
+      "terminal_send"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "smoke-1-natural",
+    "request": "What is 123456789 times 987654321? Give every digit.",
+    "answer": "121932631112635269",
+    "family": "smoke",
+    "wording": "natural"
+  },
+  {
+    "id": "gsm8k-3020",
+    "family": "math",
+    "request": "Erica lives near a lake where most locals sell fish as their main source of income, earning $20 per kg of fish. She goes out fishing today and catches twice as many fish as she caught in total in the past four months. If Erica trawled 80 kg of fish in the past four months, not including today, how much money will she have earned in the past four months including today (assuming she sells all her fish)?",
+    "answer": "4800"
+  },
+  {
+    "group": "web",
+    "id": "web-fresh-11",
+    "request": "Search online for this month\u2019s lunar phase dates.",
+    "right": [
+      "mcp__provider.search__web_search"
+    ],
+    "family": "selection"
+  },
+  {
+    "group": "media",
+    "id": "media-fresh-03",
+    "request": "Play Zombie by The Cranberries.",
+    "right": [
+      "media_play",
+      "media_status",
+      "mcp__provider.spotify__search",
+      "role_resolve",
+      "app_list"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3010",
+    "family": "math",
+    "request": "Jon's laundry machine can do 5 pounds of laundry at a time.  4 shirts weigh 1 pound and 2 pairs of pants weigh 1 pound.  If he needs to wash 20 shirts and 20 pants, how many loads of laundry does he have to do?",
+    "answer": "3"
+  },
+  {
+    "id": "gsm8k-3021",
+    "family": "math",
+    "request": "Jessica wrote a long letter to her aunt and needed to put stamps on it to mail it. She used eight pieces of paper that weigh 1/5 of an ounce each, and her envelope weighs 2/5 of an ounce. She needed one stamp per ounce. How many stamps did Jessica need to mail her letter?",
+    "answer": "2"
+  },
+  {
+    "id": "gsm8k-3017",
+    "family": "math",
+    "request": "Mandy is 3 years old. Her brother is 4 times as old as she is. Her sister is 5 years younger than her brother.  What is the age difference between Mandy and her sister?",
+    "answer": "4"
+  },
+  {
+    "id": "gsm8k-3018",
+    "family": "math",
+    "request": "Kara has to drink 4 ounces of water every time she takes her medication. Her medication instructions are to take one tablet three times a day. She followed the instructions for one week, but in the second week, she forgot twice on one day. How many ounces of water did she drink with her medication over those two weeks?",
+    "answer": "160"
+  },
+  {
+    "group": "apps",
+    "id": "apps-fresh-15",
+    "request": "Open the TV application for me.",
+    "right": [
+      "app_open",
+      "app_list",
+      "role_resolve",
+      "app_status"
+    ],
+    "family": "selection"
+  },
+  {
+    "group": "apps",
+    "id": "apps-fresh-05",
+    "request": "Open the Image Capture application for me.",
+    "right": [
+      "app_open",
+      "app_list",
+      "role_resolve",
+      "app_status"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3001",
+    "family": "math",
+    "request": "Jamie is in a walking group with 4 other ladies.  The ladies all walk 3 miles together.  On top of that, Jamie walks an additional 2 miles per day for 6 days while her friend Sue walks half that amount in 6 days.  If they walk this same route 6 days a week, how many miles do the ladies walk in total?",
+    "answer": "36"
+  },
+  {
+    "id": "gsm8k-3002-expression",
+    "family": "oracle",
+    "request": "Brenda volunteered to make 3 trays of banana pudding for the family reunion.  Each tray of banana pudding would need 80 wafer cookies.  A box of wafer cookies only had 60 cookies per box.  Each box costs $3.50.  How much will it cost her to buy just enough boxes for 3 trays of banana pudding?\n\nUse calculate with this expression: (80*3)/60*3.5. Then answer the original question using the result.",
+    "answer": "14",
+    "source_id": "gsm8k-3002",
+    "variant": "expression"
+  },
+  {
+    "group": "media",
+    "id": "media-fresh-02",
+    "request": "Play Dog Days Are Over by Florence and the Machine.",
+    "right": [
+      "media_play",
+      "media_status",
+      "mcp__provider.spotify__search",
+      "role_resolve",
+      "app_list"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "ordinary-1",
+    "family": "plain",
+    "request": "What is the plural of tooth?",
+    "answer": "teeth",
+    "accepted_answers": [
+      "teeth"
+    ]
+  },
+  {
+    "id": "gsm8k-3010-expression",
+    "family": "oracle",
+    "request": "Jon's laundry machine can do 5 pounds of laundry at a time.  4 shirts weigh 1 pound and 2 pairs of pants weigh 1 pound.  If he needs to wash 20 shirts and 20 pants, how many loads of laundry does he have to do?\n\nUse calculate with this expression: (20/4+20/2)/5. Then answer the original question using the result.",
+    "answer": "3",
+    "source_id": "gsm8k-3010",
+    "variant": "expression"
+  },
+  {
+    "group": "media",
+    "id": "media-fresh-15",
+    "request": "Play Lisztomania by Phoenix.",
+    "right": [
+      "media_play",
+      "media_status",
+      "mcp__provider.spotify__search",
+      "role_resolve",
+      "app_list"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "gsm8k-3025",
+    "family": "math",
+    "request": "A store transports fresh vegetables in crates and cartons using its delivery truck. One crate of vegetables weighs 4 kilograms and one carton 3 kilograms. How much will a load of 12 crates, and 16 cartons of vegetables weigh?",
+    "answer": "96"
+  },
+  {
+    "id": "ordinary-17",
+    "family": "plain",
+    "request": "What is the past tense of fly?",
+    "answer": "flew",
+    "accepted_answers": [
+      "flew"
+    ]
+  },
+  {
+    "group": "apps",
+    "id": "apps-fresh-00",
+    "request": "Open the Calculator application for me.",
+    "right": [
+      "app_open",
+      "app_list",
+      "role_resolve",
+      "app_status"
+    ],
+    "family": "selection"
+  },
+  {
+    "id": "ordinary-13",
+    "family": "plain",
+    "request": "What is the chemical symbol for helium?",
+    "answer": "He",
+    "accepted_answers": [
+      "He"
+    ]
+  },
+  {
+    "id": "gsm8k-3028",
+    "family": "math",
+    "request": "There are 20 sandcastles on Mark's beach, each with 10 towers. On Jeff's beach, there are three times as many castles as on Mark's beach, each with 5 towers. What is the combined total number of sandcastles and towers on Mark's and Jeff's beaches?",
+    "answer": "580"
+  },
+  {
+    "id": "ordinary-6",
+    "family": "plain",
+    "request": "What is the plural of goose?",
+    "answer": "geese",
+    "accepted_answers": [
+      "geese"
+    ]
+  },
+  {
+    "id": "ordinary-14",
+    "family": "plain",
+    "request": "What is the capital of Japan?",
+    "answer": "Tokyo",
+    "accepted_answers": [
+      "Tokyo"
+    ]
+  }
+]

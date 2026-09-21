@@ -1,0 +1,42 @@
+{
+  "frozen_before_training": true,
+  "seed": 20260920,
+  "training": {
+    "rank": 4,
+    "alpha": 8,
+    "last_k": 1,
+    "lr": 5e-05,
+    "epochs": 3
+  },
+  "gate": {
+    "net_math_gain": 8,
+    "bootstrap_lower_above_zero": true,
+    "exact_mcnemar_p_below": 0.05,
+    "ordinary_item_losses": 0,
+    "selection_item_losses": 0,
+    "new_ordinary_tool_calls": 0,
+    "math_loop_or_unrelated_failures": 0
+  },
+  "common": "/home/ubuntu/storage/daycare-runs/nemotron-math-tool-001/evaluate.py",
+  "envelope": "/home/ubuntu/storage/daycare-runs/nemotron-category-001/categorized-envelope.json",
+  "hashes": {
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/dataset.json": "f3dd9e26aaec10a7a260b4e46000b797c5ea41c38a57ae23a0e8d87845d165bb",
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/suite.json": "588f14314febaa485a417585e7c37c616a9ab6698cbc635909de814a25330ef5",
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/fit-suite.json": "c5848171ab1125f401ab146ac706cec79b2287bd16dd59572529dfbc88b18251",
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/source-train.json": "a1c1c6b08d18798a96d7388adbbb47691293e4304f733f1e784ebd52d231603f",
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/source-holdout.json": "91aeed32bb7381de4d51b91e2b721ca0975086cc00ed6f02fcf65e8224d22a63",
+    "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/label-verification.json": "232878bf01eedc8ca5adb81d9d905f07f2950e7a4254f4fad02d732726306c7f",
+    "/home/ubuntu/DayCare/scripts/calculator_verified_pilot.py": "9cf73752a2c91fbe120610efd3c2b6f9c2885c7e6d479a7f85c26f41a1323960",
+    "/home/ubuntu/storage/daycare-runs/nemotron-category-001/categorized-envelope.json": "1af1cf8496be505ec13fd3b65476ba80e134dc0d1adfff8ceba61760a18412e7",
+    "/home/ubuntu/storage/daycare-runs/nemotron-math-tool-001/evaluate.py": "e6630a9e6fb1b9aa7b7276c2c67daebe485a6ef358bd828aa7948776fe4859b2",
+    "/home/ubuntu/storage/daycare-runs/nemotron-math-tool-001/calculator/target/release/gameterm-calculate-runner": "c090ea13fa592a834dd7cf55e5d2c2dbe3eefedc00d4df6b19afb1a4e5a25674",
+    "/home/ubuntu/storage/daycare-runs/nemotron-fallback-train-002/train/adapter.npz": "e350d714b29aba2660b8b46b9cf843b6b2e6073fdba53dfe4919116e2fa0e8d7",
+    "/home/ubuntu/storage/daycare-runs/nemotron-fallback-train-002/candidate-q4_k_m.gguf": "c67b3d1949fb035d75e52e81c392d67fdd68dce3d9f75bb5bfd76e04238f7049"
+  },
+  "limitations": [
+    "one seed",
+    "combined repairs",
+    "base-pretraining overlap unknown",
+    "selection probes previously evaluated; math deciding items fresh"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "purpose": "Fresh audited comparison",
+  "model_label": "qwen",
+  "models": {
+    "baseline": "/home/ubuntu/storage/models/Qwen_Qwen3.5-4B-Q4_K_M.gguf",
+    "candidate": "/home/ubuntu/storage/models/Qwen_Qwen3.5-4B-Q4_K_M.gguf"
+  },
+  "server": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+  "gameterm": "/home/ubuntu/gameterm_beta",
+  "hashes": {
+    "/home/ubuntu/DayCare/scripts/calculator_harness_pilot.py": "682b85c3b250cd3a157b86def5bc6be3cb97e105a4d7d0de29bca4741dc92254",
+    "/home/ubuntu/DayCare/scripts/calculator_verified_pilot.py": "9cf73752a2c91fbe120610efd3c2b6f9c2885c7e6d479a7f85c26f41a1323960",
+    "/home/ubuntu/gameterm_beta/crates/host/tests/calculator_study.rs": "2a83eaaad9c92cdddf914f6899f487f5a2e0bc7d3c56afe4aed757eda687951b",
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/storage/models/Qwen_Qwen3.5-4B-Q4_K_M.gguf": "13c16f426047e2de38cd075bdade4a7bcbc8c774384876f677740cda65f8a983",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/suite.json": "08edfd94b64ee2ea744f60d9f94ba0b7c92500454da1564316506b58b74430b2",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/question-audit.json": "b628b56ceb5b6b6628a2ddb6ec809a2aa74907b326c46a9b7a200b2d31ac674d",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/answer-checks.json": "6fe1c2294b047b65eea261b8d255fc1139aa2042c707d59f3e1efc228a0ac95e",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/protocol.json": "d54fc5f8786b622105df3056bd0d4c7102e9a82653b67fda61d2bbbeb3294e7a",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/qwen-run-2/suite.json": "08edfd94b64ee2ea744f60d9f94ba0b7c92500454da1564316506b58b74430b2",
+    "/home/ubuntu/storage/daycare-runs/calculator-clarification-001/qwen-run-2/envelope.json": "1e620d6d0e6062e111d4112e05476b9add88cf526a5d2af1fda19a0c5f40a402",
+    "/home/ubuntu/DayCare/scripts/calculator_clarification_pilot.py": "45f7793b04a98900b0d174079374bbe0c76bfb9e713000251e5ef33751a0fc6a",
+    "/home/ubuntu/DayCare/scripts/calculator_quality_review.py": "30da55a7188bc341839cebee79f829306d688e120667e01062435ada8f7b5af1"
+  },
+  "environment": {
+    "LLAMA_ARG_CACHE_PROMPT": "0",
+    "LLAMA_ARG_CACHE_RAM": "0"
+  },
+  "seed": 42,
+  "thinking": false
+}

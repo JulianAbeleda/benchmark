@@ -1,0 +1,31 @@
+{
+  "purpose": "Unmodified vendor Nemotron, no DayCare adapter, matched repetition 2",
+  "model_label": "unmodified",
+  "models": {
+    "baseline": "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-Q4_K_M.gguf",
+    "candidate": "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-Q4_K_M.gguf"
+  },
+  "server": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+  "gameterm": "/home/ubuntu/gameterm_beta",
+  "hashes": {
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/suite.json": "aaa86e2c7814a5456d113148758fc017fcf2d614a89e9f4df87537054b12615a",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/protocol.json": "838243fc8b127d39144e7e71f38008f79268ff5dd689e430f4ddda2d0c86f5d2",
+    "/home/ubuntu/DayCare/scripts/calculator_harness_pilot.py": "682b85c3b250cd3a157b86def5bc6be3cb97e105a4d7d0de29bca4741dc92254",
+    "/home/ubuntu/DayCare/scripts/calculator_verified_pilot.py": "9cf73752a2c91fbe120610efd3c2b6f9c2885c7e6d479a7f85c26f41a1323960",
+    "/home/ubuntu/gameterm_beta/crates/host/tests/calculator_study.rs": "2a83eaaad9c92cdddf914f6899f487f5a2e0bc7d3c56afe4aed757eda687951b",
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/nemotron-token-bans.json": "5d387897c1e084aaad0fa33fbc3b76052d143dd4559d1346c651d30093369a54",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-run-2/suite.json": "aaa86e2c7814a5456d113148758fc017fcf2d614a89e9f4df87537054b12615a",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-run-2/envelope.json": "46c26330ae49c02bfb98314664251239595f64e8288782ca976a7bbb5f0d9c52",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-Q4_K_M.gguf": "0148c1d5d6e3af1bebf8d284cc2b44fd0c616ac87d0ca5624bdbda116ed7c6c5",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-protocol.json": "bec2b204c2b5697c86333178e918fa68a1599edc56aec95802d489dc48c9a5ee",
+    "/home/ubuntu/storage/daycare-runs/qwen-nemotron-comparison-001/unmodified-model-verification.json": "59410787f7acd28c90193ec0c35b4811ed12610fd27721b7d37e5b1302e86074"
+  },
+  "environment": {
+    "LLAMA_ARG_CACHE_PROMPT": "0",
+    "LLAMA_ARG_CACHE_RAM": "0"
+  },
+  "seed": 42,
+  "thinking": false,
+  "gate": null
+}

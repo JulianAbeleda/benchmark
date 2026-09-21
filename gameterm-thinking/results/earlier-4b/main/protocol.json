@@ -1,0 +1,28 @@
+{
+  "purpose": "Exploratory matched comparison of downloaded Qwen3.5-4B Q4_K_M and already-trained Nemotron Q4, not a LoRA before/after or fresh holdout.",
+  "models": {
+    "nemotron": "calculator-verified-sft-001/candidate-q4_k_m.gguf",
+    "qwen": "bartowski/Qwen_Qwen3.5-4B-GGUF at 4168f45a16a1290d65a4ec0fa312ae917a4c15d6"
+  },
+  "suite": "32 previously evaluated natural math, 20 plain, 16 blocked tool-selection, 4 original smoke, 8 known correct-expression diagnostic prompts; identical order in each run.",
+  "repetitions": 2,
+  "runtime": "actual shared GameTerm coordinator/provider/harness/calculator, captured 35 tools, model-native chat template, fake blocked OS",
+  "sampling": {
+    "temperature": 0,
+    "seed": 42,
+    "thinking": false,
+    "max_tokens": 768,
+    "prompt_cache": false,
+    "ram_cache": 0
+  },
+  "token_bans": "derive independently per model from live /tokenize using native dash_free probe_strings + singleton-only banned_from rule; save all probe responses and native source hash",
+  "scoring": "Manual coding-agent final-answer review; accept correct answers in prose; no gold-number-occurrence matching. Count incomplete/truncated/unrelated math actions as failures. Selection evaluates requests not external action execution. Correct expressions, numeric receipts and final fidelity checked separately.",
+  "statistics": "Each repetition compared on paired question IDs; do not pool repeats as independent questions. Report item-difference SD/SE, paired bootstrap CI, exact McNemar, cross-repeat disagreements.",
+  "limits": [
+    "Previously selected/evaluated questions, not population/adoption proof",
+    "Community Qwen quantization; exact Mac file identity unverified",
+    "Captured character configuration, not exact current Air environment",
+    "One training checkpoint per model; cannot isolate pretraining, architecture or training recipe causes"
+  ],
+  "decision": "Diagnostic only; no further training/deployment automatically triggered."
+}

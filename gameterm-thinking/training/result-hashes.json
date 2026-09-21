@@ -1,0 +1,9 @@
+{
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/candidate-q4_k_m.gguf": "1698c08aad72891a18595a1da2fa0acdd5abcb29559bb2c658460bb5bfdf2091",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/candidate-bf16.gguf": "527d2d0a047dc90fd52a9a69003d084d494aaba3d5615fac4c3415efe0edf5d3",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/train/adapter.npz": "ed8ee92b7c9405f4838c353fce4accc553abbd226459acbe5dc105d1a3b07194",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/baseline.json": "cf3d8eb56789cc8bf0c0e2ea1d0b68ed98e5f6f2749522043730a06a677e5498",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/candidate.json": "e90d084180e0886d458527cba9aaebeb062f8b0433a58f1ef79ea21985a0e9d7",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/analysis.json": "efa8e504fbcff7d7693fe0eb97dc83476057679c7f10c34826040a6274836140",
+  "/home/ubuntu/storage/daycare-runs/calculator-verified-sft-001/train/run.json": "47dd75e2967b2b0337670b5df33ae35b9266794c66fe077b86d091d6322d8ea9"
+}

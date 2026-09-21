@@ -1,0 +1,25 @@
+{
+  "daycare_revision": "5c5a6ac8a099dd69a391bfd36b3ad81dbb82be9d",
+  "tinygrad_revision": "5c5a6ac8a099dd69a391bfd36b3ad81dbb82be9d",
+  "hashes": {
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/env/llama.cpp/build-quantize/bin/llama-quantize": "8c3c502982d9e73980e7c19796bbab276cf531e747fde34e0f7d57fff8c8060e",
+    "/home/ubuntu/DayCare/daycare/nursery/native_tool_sft.py": "878f6c46574fcc94745a843cb74249655dc6de25fc0a9327ae992cd8fce63385",
+    "/home/ubuntu/storage/models/NVIDIA-Nemotron3-Nano-4B-BF16.gguf": "2126a5e8056f4178200f3c30dcac11ac0ebae200fdb8d2b8ff86e2fa2930fcb8"
+  },
+  "server_args": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8081",
+    "-ngl",
+    "99",
+    "-c",
+    "16384",
+    "-np",
+    "1",
+    "--jinja"
+  ],
+  "tests": "579 passed, 9 skipped; python3 -m pytest -q",
+  "size_check": "passed"
+}

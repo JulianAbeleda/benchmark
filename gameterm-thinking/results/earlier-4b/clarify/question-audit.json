@@ -1,0 +1,318 @@
+[
+  {
+    "id": "clear-01",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "3*1.75*100",
+    "answer": "525"
+  },
+  {
+    "id": "clear-02",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "2.4*1000-350",
+    "answer": "2050"
+  },
+  {
+    "id": "clear-03",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "17*10+8*25-95",
+    "answer": "275"
+  },
+  {
+    "id": "clear-04",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "2*60+35+48",
+    "answer": "203"
+  },
+  {
+    "id": "clear-05",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "(18*250+750)/1000",
+    "answer": "5.25"
+  },
+  {
+    "id": "clear-06",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "4.8/(40/60)",
+    "answer": "7.2"
+  },
+  {
+    "id": "clear-07",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "2.5*(80/100)",
+    "answer": "2"
+  },
+  {
+    "id": "clear-08",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "180/100*6*1.5",
+    "answer": "16.2"
+  },
+  {
+    "id": "clear-09",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "80*(1-15/100)*(1+10/100)",
+    "answer": "74.8"
+  },
+  {
+    "id": "clear-10",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "2400*(1+7.5/100)",
+    "answer": "2580"
+  },
+  {
+    "id": "clear-11",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "10/40*100",
+    "answer": "25"
+  },
+  {
+    "id": "clear-12",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "(120-90)/120*100",
+    "answer": "25"
+  },
+  {
+    "id": "clear-13",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "300*(1+40/100)",
+    "answer": "420"
+  },
+  {
+    "id": "clear-14",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "80*62.5/100-12",
+    "answer": "38"
+  },
+  {
+    "id": "clear-15",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "(1500-1020)/1500*100",
+    "answer": "32"
+  },
+  {
+    "id": "clear-16",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "1000*1.1*1.1",
+    "answer": "1210"
+  },
+  {
+    "id": "clear-17",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "7*12-9-17",
+    "answer": "58"
+  },
+  {
+    "id": "clear-18",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "120+42*5-3*8",
+    "answer": "306"
+  },
+  {
+    "id": "clear-19",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "ceil(29/4)",
+    "answer": "8"
+  },
+  {
+    "id": "clear-20",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "960/8/6",
+    "answer": "20"
+  },
+  {
+    "id": "clear-21",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "1500*18/100/3",
+    "answer": "90"
+  },
+  {
+    "id": "clear-22",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "18+(8-5)*4.5",
+    "answer": "31.5"
+  },
+  {
+    "id": "clear-23",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "45+12+7-9-4",
+    "answer": "51"
+  },
+  {
+    "id": "clear-24",
+    "quality": "clear",
+    "rationale": "Authored question reviewed for quantities, units, requested result and necessary assumptions.",
+    "expression": "3*4*6",
+    "answer": "72"
+  },
+  {
+    "id": "clarify-01",
+    "quality": "missing_information",
+    "clarification_target": "Ask for the applicable sales-tax rate; location is acceptable if explicitly used to determine that rate.",
+    "rationale": "Different tax rates give different totals."
+  },
+  {
+    "id": "clarify-02",
+    "quality": "ambiguous",
+    "clarification_target": "Ask whether the gallons are US liquid gallons or imperial gallons.",
+    "rationale": "US liquid and imperial gallons have different volumes."
+  },
+  {
+    "id": "clarify-03",
+    "quality": "missing_information",
+    "clarification_target": "Ask how many cookies each box contains.",
+    "rationale": "The required number of boxes depends on cookies per box."
+  },
+  {
+    "id": "clarify-04",
+    "quality": "missing_information",
+    "clarification_target": "Ask how many students speak both languages, or equivalently how many speak neither.",
+    "rationale": "The overlap is unspecified, so the union is not determined."
+  },
+  {
+    "id": "clarify-05",
+    "quality": "ambiguous",
+    "clarification_target": "Ask whether the coupon is applied before or after the percentage discount.",
+    "rationale": "The two orders produce $40 and $38."
+  },
+  {
+    "id": "clarify-06",
+    "quality": "missing_information",
+    "clarification_target": "Ask for the EUR to USD exchange rate to use; provider/date clarification is acceptable if it explicitly addresses the rate.",
+    "rationale": "No exchange rate is supplied and it cannot be inferred from the amount."
+  },
+  {
+    "id": "clarify-07",
+    "quality": "missing_information",
+    "clarification_target": "Ask for the trip duration.",
+    "rationale": "Average speed requires duration as well as distance."
+  },
+  {
+    "id": "clarify-08",
+    "quality": "missing_information",
+    "clarification_target": "Ask for the garden width or another measurement that determines it.",
+    "rationale": "Length alone does not determine rectangular area."
+  },
+  {
+    "id": "plain-01",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-02",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-03",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-04",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-05",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-06",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-07",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-08",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-09",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-10",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-11",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-12",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-13",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-14",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-15",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-16",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-17",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-18",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-19",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  },
+  {
+    "id": "plain-20",
+    "quality": "clear",
+    "rationale": "Stable ordinary fact or English word form; accepted alternatives declared before inference."
+  }
+]
