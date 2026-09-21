@@ -1,0 +1,20 @@
+{
+  "models": {
+    "candidate": "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf"
+  },
+  "model_label": "qwen27",
+  "server": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+  "gameterm": "/home/ubuntu/gameterm_beta",
+  "hashes": {
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/qwen27-run-1/suite.json": "236c34bf64741e9baae7a3010cd7d532b4cc591330f170af56d9a3e126d8cfb5",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/qwen27-run-1/envelope.json": "ff8d130f540bf22a69b9cf23277f516bbd34ccf6393c192a662972d6162bc9ae",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/protocol.json": "47e9d89a8a63fdd322fbf7ec379d368261e86943fd5409a287231bad0602233a",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/frozen.json": "aaa0f1df97bb91619e522149b63cd134162e41a63e8c38d34ea79d63273e4c53",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/qwen27-token-bans.json": "bc434928c71293a186643c03babc10d6815fbf627d164b9e1505b82a57ae9f50",
+    "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/DayCare/scripts/large_model_comparison.py": "e207e2adefdb44e4b9ed4fede0bac15a0d9153bf6956c6c5b0c8d40efa4ae7b9",
+    "/home/ubuntu/DayCare/scripts/calculator_harness_pilot.py": "682b85c3b250cd3a157b86def5bc6be3cb97e105a4d7d0de29bca4741dc92254",
+    "/home/ubuntu/gameterm_beta/crates/host/tests/calculator_study.rs": "d0d64ab08f2814427b444ee72416c5634752ccb81319dd5c87ba2848368d8ec1"
+  }
+}

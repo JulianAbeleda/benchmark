@@ -1,0 +1,2076 @@
+{
+  "reports": [
+    {
+      "repeat": 1,
+      "summary": {
+        "qwen27": {
+          "main": {
+            "math": {
+              "n": 32,
+              "correct": 29,
+              "factual_correct": 29,
+              "tool_used": 24,
+              "calculator": 24,
+              "incomplete": 0,
+              "truncated": 1,
+              "targeted_clarification": 0
+            },
+            "oracle": {
+              "n": 8,
+              "correct": 8,
+              "factual_correct": 8,
+              "tool_used": 8,
+              "calculator": 8,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 20,
+              "factual_correct": 20,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "selection": {
+              "n": 16,
+              "correct": 12,
+              "factual_correct": 0,
+              "tool_used": 16,
+              "calculator": 0,
+              "incomplete": 16,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "smoke": {
+              "n": 4,
+              "correct": 4,
+              "factual_correct": 4,
+              "tool_used": 4,
+              "calculator": 4,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          },
+          "clarify": {
+            "clarification": {
+              "n": 8,
+              "correct": 3,
+              "factual_correct": 0,
+              "tool_used": 4,
+              "calculator": 3,
+              "incomplete": 1,
+              "truncated": 1,
+              "targeted_clarification": 3
+            },
+            "math": {
+              "n": 24,
+              "correct": 24,
+              "factual_correct": 24,
+              "tool_used": 24,
+              "calculator": 24,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 20,
+              "factual_correct": 20,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          }
+        },
+        "nemo30": {
+          "main": {
+            "math": {
+              "n": 32,
+              "correct": 26,
+              "factual_correct": 26,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "oracle": {
+              "n": 8,
+              "correct": 4,
+              "factual_correct": 4,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 14,
+              "factual_correct": 19,
+              "tool_used": 6,
+              "calculator": 2,
+              "incomplete": 1,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "selection": {
+              "n": 16,
+              "correct": 5,
+              "factual_correct": 0,
+              "tool_used": 5,
+              "calculator": 0,
+              "incomplete": 5,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "smoke": {
+              "n": 4,
+              "correct": 0,
+              "factual_correct": 0,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          },
+          "clarify": {
+            "clarification": {
+              "n": 8,
+              "correct": 5,
+              "factual_correct": 0,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 5
+            },
+            "math": {
+              "n": 24,
+              "correct": 22,
+              "factual_correct": 22,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 14,
+              "factual_correct": 20,
+              "tool_used": 6,
+              "calculator": 3,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "main::math": {
+          "qwen27 vs unmodified": {
+            "n": 32,
+            "before": 24,
+            "after": 29,
+            "gains": 7,
+            "losses": 2,
+            "net_gain": 5,
+            "paired_sd": 0.5148989879014481,
+            "paired_se": 0.091022141492801,
+            "ci95": [
+              -0.03125,
+              0.34375
+            ],
+            "exact_mcnemar_p": 0.1796875
+          },
+          "qwen27 vs nemotron": {
+            "n": 32,
+            "before": 23,
+            "after": 29,
+            "gains": 7,
+            "losses": 1,
+            "net_gain": 6,
+            "paired_sd": 0.47092907485988494,
+            "paired_se": 0.08324928557283298,
+            "ci95": [
+              0.03125,
+              0.34375
+            ],
+            "exact_mcnemar_p": 0.0703125
+          },
+          "qwen27 vs qwen": {
+            "n": 32,
+            "before": 26,
+            "after": 29,
+            "gains": 4,
+            "losses": 1,
+            "net_gain": 3,
+            "paired_sd": 0.3901509219974802,
+            "paired_se": 0.0689695906576505,
+            "ci95": [
+              -0.03125,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.375
+          },
+          "nemo30 vs unmodified": {
+            "n": 32,
+            "before": 24,
+            "after": 26,
+            "gains": 5,
+            "losses": 3,
+            "net_gain": 2,
+            "paired_sd": 0.5040161287741853,
+            "paired_se": 0.08909830562090465,
+            "ci95": [
+              -0.09375,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.7265625
+          },
+          "nemo30 vs nemotron": {
+            "n": 32,
+            "before": 23,
+            "after": 26,
+            "gains": 6,
+            "losses": 3,
+            "net_gain": 3,
+            "paired_sd": 0.5303300858899106,
+            "paired_se": 0.09374999999999999,
+            "ci95": [
+              -0.09375,
+              0.28125
+            ],
+            "exact_mcnemar_p": 0.5078125
+          },
+          "nemo30 vs qwen": {
+            "n": 32,
+            "before": 26,
+            "after": 26,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.3592106040535498,
+            "paired_se": 0.06350006350009525,
+            "ci95": [
+              -0.125,
+              0.125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemo30": {
+            "n": 32,
+            "before": 26,
+            "after": 29,
+            "gains": 4,
+            "losses": 1,
+            "net_gain": 3,
+            "paired_sd": 0.3901509219974802,
+            "paired_se": 0.0689695906576505,
+            "ci95": [
+              -0.03125,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.375
+          }
+        },
+        "main::oracle": {
+          "qwen27 vs unmodified": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs nemotron": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs qwen": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "qwen27 vs nemo30": {
+            "n": 8,
+            "before": 4,
+            "after": 8,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              0.125,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.125
+          }
+        },
+        "main::plain": {
+          "qwen27 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "qwen27 vs nemo30": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          }
+        },
+        "main::selection": {
+          "qwen27 vs unmodified": {
+            "n": 16,
+            "before": 5,
+            "after": 12,
+            "gains": 9,
+            "losses": 2,
+            "net_gain": 7,
+            "paired_sd": 0.7274384280931732,
+            "paired_se": 0.1818596070232933,
+            "ci95": [
+              0.0625,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.0654296875
+          },
+          "qwen27 vs nemotron": {
+            "n": 16,
+            "before": 12,
+            "after": 12,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 16,
+            "before": 15,
+            "after": 12,
+            "gains": 1,
+            "losses": 4,
+            "net_gain": -3,
+            "paired_sd": 0.5439056290693574,
+            "paired_se": 0.13597640726733934,
+            "ci95": [
+              -0.4375,
+              0.0625
+            ],
+            "exact_mcnemar_p": 0.375
+          },
+          "nemo30 vs unmodified": {
+            "n": 16,
+            "before": 5,
+            "after": 5,
+            "gains": 3,
+            "losses": 3,
+            "net_gain": 0,
+            "paired_sd": 0.6324555320336759,
+            "paired_se": 0.15811388300841897,
+            "ci95": [
+              -0.3125,
+              0.3125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs nemotron": {
+            "n": 16,
+            "before": 12,
+            "after": 5,
+            "gains": 0,
+            "losses": 7,
+            "net_gain": -7,
+            "paired_sd": 0.51234753829798,
+            "paired_se": 0.128086884574495,
+            "ci95": [
+              -0.6875,
+              -0.1875
+            ],
+            "exact_mcnemar_p": 0.015625
+          },
+          "nemo30 vs qwen": {
+            "n": 16,
+            "before": 15,
+            "after": 5,
+            "gains": 0,
+            "losses": 10,
+            "net_gain": -10,
+            "paired_sd": 0.5,
+            "paired_se": 0.125,
+            "ci95": [
+              -0.875,
+              -0.375
+            ],
+            "exact_mcnemar_p": 0.001953125
+          },
+          "qwen27 vs nemo30": {
+            "n": 16,
+            "before": 5,
+            "after": 12,
+            "gains": 7,
+            "losses": 0,
+            "net_gain": 7,
+            "paired_sd": 0.51234753829798,
+            "paired_se": 0.128086884574495,
+            "ci95": [
+              0.1875,
+              0.6875
+            ],
+            "exact_mcnemar_p": 0.015625
+          }
+        },
+        "main::smoke": {
+          "qwen27 vs unmodified": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs nemotron": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs qwen": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "qwen27 vs nemo30": {
+            "n": 4,
+            "before": 0,
+            "after": 4,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          }
+        },
+        "clarify::clarification": {
+          "qwen27 vs unmodified": {
+            "n": 8,
+            "before": 0,
+            "after": 3,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs nemotron": {
+            "n": 8,
+            "before": 0,
+            "after": 3,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs qwen": {
+            "n": 8,
+            "before": 2,
+            "after": 3,
+            "gains": 1,
+            "losses": 0,
+            "net_gain": 1,
+            "paired_sd": 0.3535533905932738,
+            "paired_se": 0.125,
+            "ci95": [
+              0.0,
+              0.375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 8,
+            "before": 0,
+            "after": 5,
+            "gains": 5,
+            "losses": 0,
+            "net_gain": 5,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.25,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.0625
+          },
+          "nemo30 vs nemotron": {
+            "n": 8,
+            "before": 0,
+            "after": 5,
+            "gains": 5,
+            "losses": 0,
+            "net_gain": 5,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.25,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.0625
+          },
+          "nemo30 vs qwen": {
+            "n": 8,
+            "before": 2,
+            "after": 5,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs nemo30": {
+            "n": 8,
+            "before": 5,
+            "after": 3,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.4629100498862757,
+            "paired_se": 0.16366341767699427,
+            "ci95": [
+              -0.625,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        },
+        "clarify::math": {
+          "qwen27 vs unmodified": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs nemotron": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs qwen": {
+            "n": 24,
+            "before": 24,
+            "after": 24,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.29488391230979427,
+            "paired_se": 0.060192926542884606,
+            "ci95": [
+              -0.125,
+              0.125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs nemotron": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.41702882811414954,
+            "paired_se": 0.08512565307587487,
+            "ci95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs qwen": {
+            "n": 24,
+            "before": 24,
+            "after": 22,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              -0.20833333333333334,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs nemo30": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        },
+        "clarify::plain": {
+          "qwen27 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "qwen27 vs nemo30": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          }
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "summary": {
+        "qwen27": {
+          "main": {
+            "math": {
+              "n": 32,
+              "correct": 29,
+              "factual_correct": 29,
+              "tool_used": 24,
+              "calculator": 24,
+              "incomplete": 0,
+              "truncated": 1,
+              "targeted_clarification": 0
+            },
+            "oracle": {
+              "n": 8,
+              "correct": 8,
+              "factual_correct": 8,
+              "tool_used": 8,
+              "calculator": 8,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 20,
+              "factual_correct": 20,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "selection": {
+              "n": 16,
+              "correct": 12,
+              "factual_correct": 0,
+              "tool_used": 16,
+              "calculator": 0,
+              "incomplete": 16,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "smoke": {
+              "n": 4,
+              "correct": 4,
+              "factual_correct": 4,
+              "tool_used": 4,
+              "calculator": 4,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          },
+          "clarify": {
+            "clarification": {
+              "n": 8,
+              "correct": 3,
+              "factual_correct": 0,
+              "tool_used": 4,
+              "calculator": 3,
+              "incomplete": 1,
+              "truncated": 1,
+              "targeted_clarification": 3
+            },
+            "math": {
+              "n": 24,
+              "correct": 24,
+              "factual_correct": 24,
+              "tool_used": 24,
+              "calculator": 24,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 20,
+              "factual_correct": 20,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          }
+        },
+        "nemo30": {
+          "main": {
+            "math": {
+              "n": 32,
+              "correct": 26,
+              "factual_correct": 26,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "oracle": {
+              "n": 8,
+              "correct": 4,
+              "factual_correct": 4,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 14,
+              "factual_correct": 19,
+              "tool_used": 6,
+              "calculator": 2,
+              "incomplete": 1,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "selection": {
+              "n": 16,
+              "correct": 5,
+              "factual_correct": 0,
+              "tool_used": 5,
+              "calculator": 0,
+              "incomplete": 5,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "smoke": {
+              "n": 4,
+              "correct": 0,
+              "factual_correct": 0,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          },
+          "clarify": {
+            "clarification": {
+              "n": 8,
+              "correct": 5,
+              "factual_correct": 0,
+              "tool_used": 0,
+              "calculator": 0,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 5
+            },
+            "math": {
+              "n": 24,
+              "correct": 22,
+              "factual_correct": 22,
+              "tool_used": 1,
+              "calculator": 1,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            },
+            "plain": {
+              "n": 20,
+              "correct": 14,
+              "factual_correct": 20,
+              "tool_used": 6,
+              "calculator": 3,
+              "incomplete": 0,
+              "truncated": 0,
+              "targeted_clarification": 0
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "main::math": {
+          "qwen27 vs unmodified": {
+            "n": 32,
+            "before": 24,
+            "after": 29,
+            "gains": 7,
+            "losses": 2,
+            "net_gain": 5,
+            "paired_sd": 0.5148989879014481,
+            "paired_se": 0.091022141492801,
+            "ci95": [
+              -0.03125,
+              0.34375
+            ],
+            "exact_mcnemar_p": 0.1796875
+          },
+          "qwen27 vs nemotron": {
+            "n": 32,
+            "before": 23,
+            "after": 29,
+            "gains": 7,
+            "losses": 1,
+            "net_gain": 6,
+            "paired_sd": 0.47092907485988494,
+            "paired_se": 0.08324928557283298,
+            "ci95": [
+              0.03125,
+              0.34375
+            ],
+            "exact_mcnemar_p": 0.0703125
+          },
+          "qwen27 vs qwen": {
+            "n": 32,
+            "before": 26,
+            "after": 29,
+            "gains": 4,
+            "losses": 1,
+            "net_gain": 3,
+            "paired_sd": 0.3901509219974802,
+            "paired_se": 0.0689695906576505,
+            "ci95": [
+              -0.03125,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.375
+          },
+          "nemo30 vs unmodified": {
+            "n": 32,
+            "before": 24,
+            "after": 26,
+            "gains": 5,
+            "losses": 3,
+            "net_gain": 2,
+            "paired_sd": 0.5040161287741853,
+            "paired_se": 0.08909830562090465,
+            "ci95": [
+              -0.09375,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.7265625
+          },
+          "nemo30 vs nemotron": {
+            "n": 32,
+            "before": 23,
+            "after": 26,
+            "gains": 6,
+            "losses": 3,
+            "net_gain": 3,
+            "paired_sd": 0.5303300858899106,
+            "paired_se": 0.09374999999999999,
+            "ci95": [
+              -0.09375,
+              0.28125
+            ],
+            "exact_mcnemar_p": 0.5078125
+          },
+          "nemo30 vs qwen": {
+            "n": 32,
+            "before": 26,
+            "after": 26,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.3592106040535498,
+            "paired_se": 0.06350006350009525,
+            "ci95": [
+              -0.125,
+              0.125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemo30": {
+            "n": 32,
+            "before": 26,
+            "after": 29,
+            "gains": 4,
+            "losses": 1,
+            "net_gain": 3,
+            "paired_sd": 0.3901509219974802,
+            "paired_se": 0.0689695906576505,
+            "ci95": [
+              -0.03125,
+              0.21875
+            ],
+            "exact_mcnemar_p": 0.375
+          }
+        },
+        "main::oracle": {
+          "qwen27 vs unmodified": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs nemotron": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs qwen": {
+            "n": 8,
+            "before": 8,
+            "after": 4,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.875,
+              -0.125
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "qwen27 vs nemo30": {
+            "n": 8,
+            "before": 4,
+            "after": 8,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              0.125,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.125
+          }
+        },
+        "main::plain": {
+          "qwen27 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "qwen27 vs nemo30": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          }
+        },
+        "main::selection": {
+          "qwen27 vs unmodified": {
+            "n": 16,
+            "before": 5,
+            "after": 12,
+            "gains": 9,
+            "losses": 2,
+            "net_gain": 7,
+            "paired_sd": 0.7274384280931732,
+            "paired_se": 0.1818596070232933,
+            "ci95": [
+              0.0625,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.0654296875
+          },
+          "qwen27 vs nemotron": {
+            "n": 16,
+            "before": 12,
+            "after": 12,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 16,
+            "before": 15,
+            "after": 12,
+            "gains": 1,
+            "losses": 4,
+            "net_gain": -3,
+            "paired_sd": 0.5439056290693574,
+            "paired_se": 0.13597640726733934,
+            "ci95": [
+              -0.4375,
+              0.0625
+            ],
+            "exact_mcnemar_p": 0.375
+          },
+          "nemo30 vs unmodified": {
+            "n": 16,
+            "before": 5,
+            "after": 5,
+            "gains": 3,
+            "losses": 3,
+            "net_gain": 0,
+            "paired_sd": 0.6324555320336759,
+            "paired_se": 0.15811388300841897,
+            "ci95": [
+              -0.3125,
+              0.3125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs nemotron": {
+            "n": 16,
+            "before": 12,
+            "after": 5,
+            "gains": 0,
+            "losses": 7,
+            "net_gain": -7,
+            "paired_sd": 0.51234753829798,
+            "paired_se": 0.128086884574495,
+            "ci95": [
+              -0.6875,
+              -0.1875
+            ],
+            "exact_mcnemar_p": 0.015625
+          },
+          "nemo30 vs qwen": {
+            "n": 16,
+            "before": 15,
+            "after": 5,
+            "gains": 0,
+            "losses": 10,
+            "net_gain": -10,
+            "paired_sd": 0.5,
+            "paired_se": 0.125,
+            "ci95": [
+              -0.875,
+              -0.375
+            ],
+            "exact_mcnemar_p": 0.001953125
+          },
+          "qwen27 vs nemo30": {
+            "n": 16,
+            "before": 5,
+            "after": 12,
+            "gains": 7,
+            "losses": 0,
+            "net_gain": 7,
+            "paired_sd": 0.51234753829798,
+            "paired_se": 0.128086884574495,
+            "ci95": [
+              0.1875,
+              0.6875
+            ],
+            "exact_mcnemar_p": 0.015625
+          }
+        },
+        "main::smoke": {
+          "qwen27 vs unmodified": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs nemotron": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "nemo30 vs qwen": {
+            "n": 4,
+            "before": 4,
+            "after": 0,
+            "gains": 0,
+            "losses": 4,
+            "net_gain": -4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              -1.0,
+              -1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "qwen27 vs nemo30": {
+            "n": 4,
+            "before": 0,
+            "after": 4,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "exact_mcnemar_p": 0.125
+          }
+        },
+        "clarify::clarification": {
+          "qwen27 vs unmodified": {
+            "n": 8,
+            "before": 0,
+            "after": 3,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs nemotron": {
+            "n": 8,
+            "before": 0,
+            "after": 3,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs qwen": {
+            "n": 8,
+            "before": 2,
+            "after": 3,
+            "gains": 1,
+            "losses": 0,
+            "net_gain": 1,
+            "paired_sd": 0.3535533905932738,
+            "paired_se": 0.125,
+            "ci95": [
+              0.0,
+              0.375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 8,
+            "before": 0,
+            "after": 5,
+            "gains": 5,
+            "losses": 0,
+            "net_gain": 5,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.25,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.0625
+          },
+          "nemo30 vs nemotron": {
+            "n": 8,
+            "before": 0,
+            "after": 5,
+            "gains": 5,
+            "losses": 0,
+            "net_gain": 5,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.25,
+              0.875
+            ],
+            "exact_mcnemar_p": 0.0625
+          },
+          "nemo30 vs qwen": {
+            "n": 8,
+            "before": 2,
+            "after": 5,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "qwen27 vs nemo30": {
+            "n": 8,
+            "before": 5,
+            "after": 3,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.4629100498862757,
+            "paired_se": 0.16366341767699427,
+            "ci95": [
+              -0.625,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        },
+        "clarify::math": {
+          "qwen27 vs unmodified": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs nemotron": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs qwen": {
+            "n": 24,
+            "before": 24,
+            "after": 24,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.29488391230979427,
+            "paired_se": 0.060192926542884606,
+            "ci95": [
+              -0.125,
+              0.125
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs nemotron": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.41702882811414954,
+            "paired_se": 0.08512565307587487,
+            "ci95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs qwen": {
+            "n": 24,
+            "before": 24,
+            "after": 22,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              -0.20833333333333334,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "qwen27 vs nemo30": {
+            "n": 24,
+            "before": 22,
+            "after": 24,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.28232985128663995,
+            "paired_se": 0.05763033956734372,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        },
+        "clarify::plain": {
+          "qwen27 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "qwen27 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "nemo30 vs unmodified": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs nemotron": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "nemo30 vs qwen": {
+            "n": 20,
+            "before": 20,
+            "after": 14,
+            "gains": 0,
+            "losses": 6,
+            "net_gain": -6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              -0.5,
+              -0.1
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "qwen27 vs nemo30": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          }
+        }
+      }
+    }
+  ],
+  "review_sha256": "fbfa98fdd921464d13056ac6cee5914a7f0a6df75555c24f49c33f90b7b81442",
+  "note": "Same deterministic repetitions are not independent samples; paired statistics describe these selected questions. No causal size or training claim."
+}

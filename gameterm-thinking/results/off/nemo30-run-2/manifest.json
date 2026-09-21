@@ -1,0 +1,20 @@
+{
+  "models": {
+    "candidate": "/home/ubuntu/storage/models/NVIDIA-Nemotron-3-Nano-30B-A3B-Q4_K_M.gguf"
+  },
+  "model_label": "nemo30",
+  "server": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+  "gameterm": "/home/ubuntu/gameterm_beta",
+  "hashes": {
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/nemo30-run-2/suite.json": "236c34bf64741e9baae7a3010cd7d532b4cc591330f170af56d9a3e126d8cfb5",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/nemo30-run-2/envelope.json": "75b8cf36ee67d0ac434229ce8ad12020b98df9ea72f20aa7801bb0bac564594a",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/protocol.json": "47e9d89a8a63fdd322fbf7ec379d368261e86943fd5409a287231bad0602233a",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/frozen.json": "aaa0f1df97bb91619e522149b63cd134162e41a63e8c38d34ea79d63273e4c53",
+    "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/nemo30-token-bans.json": "8144b99bd56405e18645f5c3671407fc509968ae62eca87cf4d9370203056514",
+    "/home/ubuntu/storage/models/NVIDIA-Nemotron-3-Nano-30B-A3B-Q4_K_M.gguf": "0f111a0d49777a2a0178758b1aee14e5365c495987499401ef3ebe87754322a8",
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/DayCare/scripts/large_model_comparison.py": "e207e2adefdb44e4b9ed4fede0bac15a0d9153bf6956c6c5b0c8d40efa4ae7b9",
+    "/home/ubuntu/DayCare/scripts/calculator_harness_pilot.py": "682b85c3b250cd3a157b86def5bc6be3cb97e105a4d7d0de29bca4741dc92254",
+    "/home/ubuntu/gameterm_beta/crates/host/tests/calculator_study.rs": "d0d64ab08f2814427b444ee72416c5634752ccb81319dd5c87ba2848368d8ec1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "general.architecture": "nemotron_h_moe",
+  "general.name": "NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "general.size_label": "128x2.4B",
+  "nemotron_h_moe.expert_count": 128,
+  "nemotron_h_moe.expert_used_count": 6,
+  "general.file_type": 15
+}

@@ -1,0 +1,17 @@
+{
+  "models": {
+    "candidate": "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf"
+  },
+  "server": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+  "gameterm": "/home/ubuntu/storage/worktrees/gameterm-thinking-study",
+  "hashes": {
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/qwen27-run-2/suite.json": "236c34bf64741e9baae7a3010cd7d532b4cc591330f170af56d9a3e126d8cfb5",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/qwen27-run-2/envelope.json": "f078b58fde1232b6792fc86ac43838e62209f5f83ec7d8d066ab88faaa8e1b1d",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/frozen.json": "2f040c0f73c4dffa9017812cdaa0eca5a8b87e4c200c6691cc72f55a7f1f25f2",
+    "/home/ubuntu/DayCare/scripts/thinking_model_comparison.py": "7017ba8a0a4c134619ca8ae523b66d3280c529e76734fa4ed1eaa53f39e50f05",
+    "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0",
+    "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+    "/home/ubuntu/storage/worktrees/gameterm-thinking-study/crates/host/tests/calculator_study.rs": "c1724b6bf32373f417dfa8c1a5cd7efea4d68e55bb53157446eca9828240a990",
+    "/home/ubuntu/DayCare/scripts/calculator_harness_pilot.py": "682b85c3b250cd3a157b86def5bc6be3cb97e105a4d7d0de29bca4741dc92254"
+  }
+}

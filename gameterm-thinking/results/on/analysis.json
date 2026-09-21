@@ -1,0 +1,836 @@
+{
+  "reports": [
+    {
+      "repeat": 1,
+      "summary": {
+        "qwen27": {
+          "clarify::clarification": {
+            "n": 8,
+            "success": 3,
+            "factual_correct": 0,
+            "calculator": 3,
+            "tool_used": 4,
+            "truncated": 1,
+            "incomplete": 1
+          },
+          "clarify::math": {
+            "n": 24,
+            "success": 24,
+            "factual_correct": 24,
+            "calculator": 24,
+            "tool_used": 24,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::math": {
+            "n": 32,
+            "success": 29,
+            "factual_correct": 29,
+            "calculator": 31,
+            "tool_used": 31,
+            "truncated": 3,
+            "incomplete": 1
+          },
+          "main::oracle": {
+            "n": 8,
+            "success": 8,
+            "factual_correct": 8,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::selection": {
+            "n": 16,
+            "success": 9,
+            "factual_correct": 0,
+            "calculator": 0,
+            "tool_used": 14,
+            "truncated": 5,
+            "incomplete": 14
+          },
+          "main::smoke": {
+            "n": 4,
+            "success": 4,
+            "factual_correct": 4,
+            "calculator": 4,
+            "tool_used": 4,
+            "truncated": 0,
+            "incomplete": 0
+          }
+        },
+        "nemo30": {
+          "clarify::clarification": {
+            "n": 8,
+            "success": 3,
+            "factual_correct": 0,
+            "calculator": 2,
+            "tool_used": 3,
+            "truncated": 0,
+            "incomplete": 1
+          },
+          "clarify::math": {
+            "n": 24,
+            "success": 22,
+            "factual_correct": 22,
+            "calculator": 16,
+            "tool_used": 16,
+            "truncated": 2,
+            "incomplete": 0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::math": {
+            "n": 32,
+            "success": 24,
+            "factual_correct": 24,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 8,
+            "incomplete": 0
+          },
+          "main::oracle": {
+            "n": 8,
+            "success": 7,
+            "factual_correct": 7,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 1,
+            "incomplete": 1
+          },
+          "main::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::selection": {
+            "n": 16,
+            "success": 9,
+            "factual_correct": 0,
+            "calculator": 0,
+            "tool_used": 13,
+            "truncated": 7,
+            "incomplete": 11
+          },
+          "main::smoke": {
+            "n": 4,
+            "success": 2,
+            "factual_correct": 2,
+            "calculator": 2,
+            "tool_used": 2,
+            "truncated": 2,
+            "incomplete": 1
+          }
+        }
+      },
+      "comparisons": {
+        "qwen27": {
+          "clarify::clarification": {
+            "n": 8,
+            "before": 3,
+            "after": 3,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.375,
+              0.375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::math": {
+            "n": 24,
+            "before": 24,
+            "after": 24,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::math": {
+            "n": 32,
+            "before": 29,
+            "after": 29,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.254000254000381,
+            "paired_se": 0.04490132550669372,
+            "ci95": [
+              -0.09375,
+              0.09375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::oracle": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::plain": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::selection": {
+            "n": 16,
+            "before": 12,
+            "after": 9,
+            "gains": 0,
+            "losses": 3,
+            "net_gain": -3,
+            "paired_sd": 0.4031128874149275,
+            "paired_se": 0.10077822185373188,
+            "ci95": [
+              -0.375,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "main::smoke": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          }
+        },
+        "nemo30": {
+          "clarify::clarification": {
+            "n": 8,
+            "before": 5,
+            "after": 3,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.4629100498862757,
+            "paired_se": 0.16366341767699427,
+            "ci95": [
+              -0.625,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "clarify::math": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.41702882811414954,
+            "paired_se": 0.08512565307587487,
+            "ci95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "main::math": {
+            "n": 32,
+            "before": 26,
+            "after": 24,
+            "gains": 2,
+            "losses": 4,
+            "net_gain": -2,
+            "paired_sd": 0.4353345024601864,
+            "paired_se": 0.07695699469351738,
+            "ci95": [
+              -0.21875,
+              0.09375
+            ],
+            "exact_mcnemar_p": 0.6875
+          },
+          "main::oracle": {
+            "n": 8,
+            "before": 4,
+            "after": 7,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "main::plain": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "main::selection": {
+            "n": 16,
+            "before": 5,
+            "after": 9,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.4472135954999579,
+            "paired_se": 0.11180339887498948,
+            "ci95": [
+              0.0625,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "main::smoke": {
+            "n": 4,
+            "before": 0,
+            "after": 2,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.5773502691896257,
+            "paired_se": 0.28867513459481287,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        }
+      },
+      "wire": {
+        "qwen27": {
+          "requests": 221,
+          "reasoning_turns": 132,
+          "reasoning_chunks": 33641,
+          "output_tokens": 46605
+        },
+        "nemo30": {
+          "requests": 169,
+          "reasoning_turns": 132,
+          "reasoning_chunks": 61369,
+          "output_tokens": 68056
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "summary": {
+        "qwen27": {
+          "clarify::clarification": {
+            "n": 8,
+            "success": 3,
+            "factual_correct": 0,
+            "calculator": 3,
+            "tool_used": 4,
+            "truncated": 1,
+            "incomplete": 1
+          },
+          "clarify::math": {
+            "n": 24,
+            "success": 24,
+            "factual_correct": 24,
+            "calculator": 24,
+            "tool_used": 24,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::math": {
+            "n": 32,
+            "success": 29,
+            "factual_correct": 29,
+            "calculator": 31,
+            "tool_used": 31,
+            "truncated": 3,
+            "incomplete": 1
+          },
+          "main::oracle": {
+            "n": 8,
+            "success": 8,
+            "factual_correct": 8,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::selection": {
+            "n": 16,
+            "success": 9,
+            "factual_correct": 0,
+            "calculator": 0,
+            "tool_used": 14,
+            "truncated": 5,
+            "incomplete": 14
+          },
+          "main::smoke": {
+            "n": 4,
+            "success": 4,
+            "factual_correct": 4,
+            "calculator": 4,
+            "tool_used": 4,
+            "truncated": 0,
+            "incomplete": 0
+          }
+        },
+        "nemo30": {
+          "clarify::clarification": {
+            "n": 8,
+            "success": 3,
+            "factual_correct": 0,
+            "calculator": 2,
+            "tool_used": 3,
+            "truncated": 0,
+            "incomplete": 1
+          },
+          "clarify::math": {
+            "n": 24,
+            "success": 22,
+            "factual_correct": 22,
+            "calculator": 16,
+            "tool_used": 16,
+            "truncated": 2,
+            "incomplete": 0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::math": {
+            "n": 32,
+            "success": 24,
+            "factual_correct": 24,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 8,
+            "incomplete": 0
+          },
+          "main::oracle": {
+            "n": 8,
+            "success": 7,
+            "factual_correct": 7,
+            "calculator": 8,
+            "tool_used": 8,
+            "truncated": 1,
+            "incomplete": 1
+          },
+          "main::plain": {
+            "n": 20,
+            "success": 20,
+            "factual_correct": 20,
+            "calculator": 0,
+            "tool_used": 0,
+            "truncated": 0,
+            "incomplete": 0
+          },
+          "main::selection": {
+            "n": 16,
+            "success": 9,
+            "factual_correct": 0,
+            "calculator": 0,
+            "tool_used": 13,
+            "truncated": 7,
+            "incomplete": 11
+          },
+          "main::smoke": {
+            "n": 4,
+            "success": 2,
+            "factual_correct": 2,
+            "calculator": 2,
+            "tool_used": 2,
+            "truncated": 2,
+            "incomplete": 1
+          }
+        }
+      },
+      "comparisons": {
+        "qwen27": {
+          "clarify::clarification": {
+            "n": 8,
+            "before": 3,
+            "after": 3,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.5345224838248488,
+            "paired_se": 0.1889822365046136,
+            "ci95": [
+              -0.375,
+              0.375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::math": {
+            "n": 24,
+            "before": 24,
+            "after": 24,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::math": {
+            "n": 32,
+            "before": 29,
+            "after": 29,
+            "gains": 1,
+            "losses": 1,
+            "net_gain": 0,
+            "paired_sd": 0.254000254000381,
+            "paired_se": 0.04490132550669372,
+            "ci95": [
+              -0.09375,
+              0.09375
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::oracle": {
+            "n": 8,
+            "before": 8,
+            "after": 8,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::plain": {
+            "n": 20,
+            "before": 20,
+            "after": 20,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "main::selection": {
+            "n": 16,
+            "before": 12,
+            "after": 9,
+            "gains": 0,
+            "losses": 3,
+            "net_gain": -3,
+            "paired_sd": 0.4031128874149275,
+            "paired_se": 0.10077822185373188,
+            "ci95": [
+              -0.375,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "main::smoke": {
+            "n": 4,
+            "before": 4,
+            "after": 4,
+            "gains": 0,
+            "losses": 0,
+            "net_gain": 0,
+            "paired_sd": 0.0,
+            "paired_se": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "exact_mcnemar_p": 1.0
+          }
+        },
+        "nemo30": {
+          "clarify::clarification": {
+            "n": 8,
+            "before": 5,
+            "after": 3,
+            "gains": 0,
+            "losses": 2,
+            "net_gain": -2,
+            "paired_sd": 0.4629100498862757,
+            "paired_se": 0.16366341767699427,
+            "ci95": [
+              -0.625,
+              0.0
+            ],
+            "exact_mcnemar_p": 0.5
+          },
+          "clarify::math": {
+            "n": 24,
+            "before": 22,
+            "after": 22,
+            "gains": 2,
+            "losses": 2,
+            "net_gain": 0,
+            "paired_sd": 0.41702882811414954,
+            "paired_se": 0.08512565307587487,
+            "ci95": [
+              -0.16666666666666666,
+              0.16666666666666666
+            ],
+            "exact_mcnemar_p": 1.0
+          },
+          "clarify::plain": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "main::math": {
+            "n": 32,
+            "before": 26,
+            "after": 24,
+            "gains": 2,
+            "losses": 4,
+            "net_gain": -2,
+            "paired_sd": 0.4353345024601864,
+            "paired_se": 0.07695699469351738,
+            "ci95": [
+              -0.21875,
+              0.09375
+            ],
+            "exact_mcnemar_p": 0.6875
+          },
+          "main::oracle": {
+            "n": 8,
+            "before": 4,
+            "after": 7,
+            "gains": 3,
+            "losses": 0,
+            "net_gain": 3,
+            "paired_sd": 0.5175491695067657,
+            "paired_se": 0.18298126367784995,
+            "ci95": [
+              0.125,
+              0.75
+            ],
+            "exact_mcnemar_p": 0.25
+          },
+          "main::plain": {
+            "n": 20,
+            "before": 14,
+            "after": 20,
+            "gains": 6,
+            "losses": 0,
+            "net_gain": 6,
+            "paired_sd": 0.4701623459816272,
+            "paired_se": 0.10513149660756935,
+            "ci95": [
+              0.1,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.03125
+          },
+          "main::selection": {
+            "n": 16,
+            "before": 5,
+            "after": 9,
+            "gains": 4,
+            "losses": 0,
+            "net_gain": 4,
+            "paired_sd": 0.4472135954999579,
+            "paired_se": 0.11180339887498948,
+            "ci95": [
+              0.0625,
+              0.5
+            ],
+            "exact_mcnemar_p": 0.125
+          },
+          "main::smoke": {
+            "n": 4,
+            "before": 0,
+            "after": 2,
+            "gains": 2,
+            "losses": 0,
+            "net_gain": 2,
+            "paired_sd": 0.5773502691896257,
+            "paired_se": 0.28867513459481287,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "exact_mcnemar_p": 0.5
+          }
+        }
+      },
+      "wire": {
+        "qwen27": {
+          "requests": 221,
+          "reasoning_turns": 132,
+          "reasoning_chunks": 33641,
+          "output_tokens": 46605
+        },
+        "nemo30": {
+          "requests": 169,
+          "reasoning_turns": 132,
+          "reasoning_chunks": 61369,
+          "output_tokens": 68056
+        }
+      }
+    }
+  ],
+  "changed_repeat_traces": {
+    "qwen27": [],
+    "nemo30": []
+  },
+  "review_sha256": "4966cbd6cfde370bea994b0babb10a1e32e0c737aaf7ae8777d2c906103b47d0",
+  "note": "Matched 768-token budget, selected previously examined questions; repeats not independent."
+}

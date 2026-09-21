@@ -1,0 +1,30 @@
+{
+  "purpose": "Within-model thinking toggle; same 132 questions and 768-token output budget.",
+  "models": {
+    "qwen27": "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf",
+    "nemo30": "/home/ubuntu/storage/models/NVIDIA-Nemotron-3-Nano-30B-A3B-Q4_K_M.gguf"
+  },
+  "repeats": 2,
+  "thinking": true,
+  "temperature": 0,
+  "seed": 42,
+  "server_context": 16384,
+  "max_tokens": 768,
+  "tools": 35,
+  "cache_prompt": false,
+  "cache_ram": 0,
+  "main": "32 natural math, 20 ordinary, 16 selection, four smoke, eight supplied-expression cases.",
+  "clarify": "24 clear math, eight underspecified/ambiguous, 20 ordinary controls.",
+  "scoring": "Keep original frozen rubrics and answer keys. Explicit arm-hidden final-answer review; prose/units accepted. No numeric substring grading. Clarification must ask for the actual missing fact without guessing or calling tools. Plain controls require no tools. Selection requires calls and all proposed names allowed, not completed external execution. Truncated/incomplete math fails.",
+  "comparisons": "Per-cohort per-task paired SD, SE, bootstrap CI, exact McNemar; never pool deterministic repeats.",
+  "limits": [
+    "Previously examined questions, not fresh holdout or independent confirmation.",
+    "Qwen3.8-27B versus earlier Qwen3.5-4B confounds size with model version.",
+    "Nemotron 30B-A3B is MoE, about 3.5B active, not compute-matched to dense Qwen27B.",
+    "Existing server harness with blocked OS tools, not Air UI parity.",
+    "Single agent semantic reviewer, not independent human adjudication."
+  ],
+  "baseline": "/home/ubuntu/storage/daycare-runs/large-model-comparison-001",
+  "budget_note": "Reasoning shares the output budget. Report truncation, not just final accuracy. No automatic budget changes.",
+  "driver_note": "Isolated same-revision GameTerm checkout; only driver thinking setting now comes from envelope."
+}

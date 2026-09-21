@@ -1,0 +1,16 @@
+{
+  "inference_commit": "cc08ae8",
+  "report_commit": "e9f664e7a0ef7daaa1af83c5d8e6096af065315a",
+  "sha256": {
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/analysis.json": "eca1439427836c7fda6d17cb330f7d85814380f1a85922b7e4269484a4245ad0",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/review.json": "4966cbd6cfde370bea994b0babb10a1e32e0c737aaf7ae8777d2c906103b47d0",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/review-map.json": "513b6bd479766de5839aaa93648129e4f96980c25b05584d49b2189a94a74b6a",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/review-freeze.json": "a9dd67ed4ec3ee46d7dcb32bcd06cef0168c852fa5927c3ac045d2682753916f",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/matched-config-audit.json": "63069ee3c4dcbabcc09d554ec8fe4949d1f5369cc8083be4339f0771056bbf04",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/run-1-scored.json": "7cf35a7c246ec5d34746d582d40e0a0322fe002dd37ae0e2dcec679bb2837758",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/run-2-scored.json": "7a2e679ddb136a5135412929471996bd9c87d457922f9b5b8eeea40a80bf3d0a",
+    "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/driver-change.patch": "991e126f58d075174d37b5ab96ab7e96351a99c9d1ee39a996d45e6224bd0fb5",
+    "/home/ubuntu/DayCare/scripts/thinking_model_comparison.py": "7017ba8a0a4c134619ca8ae523b66d3280c529e76734fa4ed1eaa53f39e50f05",
+    "/home/ubuntu/storage/worktrees/gameterm-thinking-study/crates/host/tests/calculator_study.rs": "c1724b6bf32373f417dfa8c1a5cd7efea4d68e55bb53157446eca9828240a990"
+  }
+}

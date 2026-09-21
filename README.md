@@ -11,9 +11,12 @@ This repo is tooling. It is not part of any product, and nothing here ships.
 |---|---|
 | [`bc-arithmetic`](bc-arithmetic/) | How much better is a small model at arithmetic when it can call `bc`, and how well does it write `bc` commands? |
 | [`gameterm-calculate`](gameterm-calculate/) | Inside a real assistant app, does a small model use a calculator tool when told to, and is the answer it gives the person right? |
+| [`gameterm-thinking`](gameterm-thinking/) | In the native GameTerm harness, does thinking change larger models' calculator use, completed answers, and clarification? Includes 1,056 recorded turns and offline score replay. |
 | [`tool-menu-size`](tool-menu-size/) | How many tools can a small model see before it picks the wrong one? Is there a number to cap the menu at? |
 
 ## Requirements
+
+The original three tests below use macOS. The [GameTerm thinking study](gameterm-thinking/) was run on Linux/CUDA and has its own requirements; its recorded results can be verified without a GPU.
 
 - macOS with the Arkey root installed (`~/Library/Application Support/Arkey`):
   the test uses its `llama-server` and the models under `models/<name>/model.gguf`.

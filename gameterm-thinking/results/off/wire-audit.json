@@ -1,0 +1,32 @@
+{
+  "qwen27": {
+    "runs": [
+      {
+        "repeat": 1,
+        "requests": 215,
+        "reasoning_chunks": 0
+      },
+      {
+        "repeat": 2,
+        "requests": 215,
+        "reasoning_chunks": 0
+      }
+    ],
+    "changed_repeat_traces": []
+  },
+  "nemo30": {
+    "runs": [
+      {
+        "repeat": 1,
+        "requests": 177,
+        "reasoning_chunks": 0
+      },
+      {
+        "repeat": 2,
+        "requests": 177,
+        "reasoning_chunks": 0
+      }
+    ],
+    "changed_repeat_traces": []
+  }
+}

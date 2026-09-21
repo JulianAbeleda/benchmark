@@ -1,0 +1,16 @@
+{
+  "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/protocol.json": "709f310441432fbcacc8d3cc1596007e77c1725e94ef319626df87582fc93d35",
+  "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/suite.json": "236c34bf64741e9baae7a3010cd7d532b4cc591330f170af56d9a3e126d8cfb5",
+  "/home/ubuntu/DayCare/scripts/thinking_model_comparison.py": "7017ba8a0a4c134619ca8ae523b66d3280c529e76734fa4ed1eaa53f39e50f05",
+  "/home/ubuntu/storage/worktrees/gameterm-thinking-study/crates/host/tests/calculator_study.rs": "c1724b6bf32373f417dfa8c1a5cd7efea4d68e55bb53157446eca9828240a990",
+  "/home/ubuntu/DayCare/scripts/large_model_review.py": "205b547866fe1ba08485945676677022580217f254663e11b677e813cac593ea",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/analysis.json": "f7857f039f8cc45aa070a2b32790094942fae7b688d7e7f6d5da099e185dd7b0",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/review.json": "fbfa98fdd921464d13056ac6cee5914a7f0a6df75555c24f49c33f90b7b81442",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/review-map.json": "d9f03d92186c6ac977b959041c8f6b7eab94833875af4b29c04225bd13309400",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/run-1-scored.json": "e659cf0a9e6ff010b141927e695bb8cb44af6856e8929bc3d46409566a059b10",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/run-2-scored.json": "218f4e871bef3b796d2b97e2aa22556238e9d26f99fc02dd0d8c3275ef84683f",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/qwen27-run-1/envelope.json": "ff8d130f540bf22a69b9cf23277f516bbd34ccf6393c192a662972d6162bc9ae",
+  "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/qwen27-envelope.json": "f078b58fde1232b6792fc86ac43838e62209f5f83ec7d8d066ab88faaa8e1b1d",
+  "/home/ubuntu/storage/daycare-runs/large-model-comparison-001/nemo30-run-1/envelope.json": "75b8cf36ee67d0ac434229ce8ad12020b98df9ea72f20aa7801bb0bac564594a",
+  "/home/ubuntu/storage/daycare-runs/large-model-thinking-001/nemo30-envelope.json": "6e16c5218f24e2b01f73b4ac26c1e2c2d8266352dfdb7aa801b51e548fb84877"
+}

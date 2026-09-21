@@ -1,0 +1,58 @@
+{
+  "qwen27": {
+    "only_envelope_change": "enable_thinking false to true",
+    "matched_artifacts": [
+      {
+        "repeat": 1,
+        "path": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+        "sha256": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0"
+      },
+      {
+        "repeat": 1,
+        "path": "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf",
+        "sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34"
+      },
+      {
+        "repeat": 2,
+        "path": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+        "sha256": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0"
+      },
+      {
+        "repeat": 2,
+        "path": "/home/ubuntu/storage/models/Qwen3.8-27B-Q4_K_M.gguf",
+        "sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34"
+      }
+    ]
+  },
+  "nemo30": {
+    "only_envelope_change": "enable_thinking false to true",
+    "matched_artifacts": [
+      {
+        "repeat": 1,
+        "path": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+        "sha256": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0"
+      },
+      {
+        "repeat": 1,
+        "path": "/home/ubuntu/storage/models/NVIDIA-Nemotron-3-Nano-30B-A3B-Q4_K_M.gguf",
+        "sha256": "0f111a0d49777a2a0178758b1aee14e5365c495987499401ef3ebe87754322a8"
+      },
+      {
+        "repeat": 2,
+        "path": "/home/ubuntu/env/llama.cpp/build-cuda/bin/llama-server",
+        "sha256": "3199983082f507fb694d10a43e208d4eca5e444daa2f5569ec8f56ee9ea52fe0"
+      },
+      {
+        "repeat": 2,
+        "path": "/home/ubuntu/storage/models/NVIDIA-Nemotron-3-Nano-30B-A3B-Q4_K_M.gguf",
+        "sha256": "0f111a0d49777a2a0178758b1aee14e5365c495987499401ef3ebe87754322a8"
+      }
+    ]
+  },
+  "/home/ubuntu/gameterm_beta": {
+    "commit": "e61521b3731f2c4ed387d9dbaac8fb0a6105c6e5"
+  },
+  "/home/ubuntu/storage/worktrees/gameterm-thinking-study": {
+    "commit": "e61521b3731f2c4ed387d9dbaac8fb0a6105c6e5"
+  }
+}
